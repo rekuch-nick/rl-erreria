@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"cordScreenToLogic",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cordScreenToLogic",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

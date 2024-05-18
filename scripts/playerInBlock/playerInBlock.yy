@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"playerInBlock",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerInBlock",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

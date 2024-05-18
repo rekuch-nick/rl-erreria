@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"wwRollSurface",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wwRollSurface",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

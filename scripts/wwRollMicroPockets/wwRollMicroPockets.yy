@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"wwRollMicroPockets",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wwRollMicroPockets",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

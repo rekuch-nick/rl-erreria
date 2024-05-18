@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"wwSetup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wwSetup",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
