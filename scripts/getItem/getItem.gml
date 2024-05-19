@@ -51,6 +51,13 @@ function getItem(n){
 		s.slotTag = "Boots";
 	}
 	
+	if(n == "Sonic Gear"){
+		s.img = imgItmSonicGear;
+		s.might = 8;
+		s.passive = [Passive.moveFast];
+		s.slotTag = "Boots";
+	}
+	
 	if(n == "Armor"){
 		s.img = imgItmArmor;
 		s.might = 2;

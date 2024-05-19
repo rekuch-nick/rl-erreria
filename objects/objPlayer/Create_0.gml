@@ -63,6 +63,8 @@ bag[1].item = getItem("Pickaxe");
 bag[2].item = getItem("Platform"); bag[2].item.stack = 2;
 
 bag[8].item = getItem("Hop n Tops");
+bag[9].item = getItem("Armor");
+bag[10].item = getItem("Sonic Gear");
 
 for(var i=0; i<100; i++){
 	mat[i] = 0;

@@ -19,20 +19,48 @@ function playerStepBag(){
 		
 		if(xSICur == -1){
 			var si = getObjectAtSpot(objItemSlot, xICur, yICur);
-			if(si != noone){
+			//if(si != noone){
 				selectedItem = getObjectAtSpot(objItemSlot, xICur, yICur);
 				xSICur = xICur;
 				ySICur = yICur;
-			}
+			//}
 		} else {
-			if( (yICur != 0 ) ||
-						(xICur <= 2 && selectedItem.item.action != noone) ||
-						(xICur >= 3 && array_length(selectedItem.item.passive) > 0) ){
 			
-				var si = getObjectAtSpot(objItemSlot, xICur, yICur);
-				var i1 = si.item;
-				si.item = selectedItem.item;
-				selectedItem.item = i1;
+			bag2 = [];
+			for(var i=0; i<64; i++){
+				bag2[i] = bag[i].item;
+			}
+			
+			
+			
+			var si = getObjectAtSpot(objItemSlot, xICur, yICur);
+			var i1 = si.item;
+			si.item = selectedItem.item;
+			selectedItem.item = i1;
+			
+			var illegal = false;
+			for(var i=0; i<3; i++){
+				if(bag[i].item != noone && bag[i].item.action == noone){ illegal = true; }
+			}
+			for(var i=3; i<8; i++){
+				if(bag[i].item != noone && bag[i].item.passive == []){ illegal = true; }
+			}
+			tags = [];
+			for(var i=3; i<8; i++){
+				if(bag[i].item != noone && bag[i].item.slotTag != ""){
+					if(arrayContains(tags, bag[i].item.slotTag)){
+						illegal = true; break;
+					} else {
+						tags[array_length(tags)] = bag[i].item.slotTag;
+					}
+				}
+			}
+			
+			
+			if(illegal){
+				for(var i=0; i<64; i++){
+					bag[i].item = bag2[i];
+				}
 			}
 			
 			

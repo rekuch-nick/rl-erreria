@@ -32,7 +32,7 @@ if(inPlayMS == 0){
 
 
 xSpeed = 0;
-if(xIn != 0){ xSpeed = 10 * getDir(xIn); }
+if(xIn != 0){ xSpeed = moveSpeed * getDir(xIn); }
 if(debug){ xSpeed *= 4; }
 var xMoved = 0;
 for(var i=0; i<abs(xSpeed); i++){

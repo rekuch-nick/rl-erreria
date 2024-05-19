@@ -27,7 +27,7 @@ function zNums(){
 	}
 	
 	enum Passive {
-		multijump, armor,
+		multijump, armor, moveFast,
 	}
 	
 	
