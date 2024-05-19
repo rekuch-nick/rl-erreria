@@ -45,8 +45,8 @@ for(var a=x1; a<=x2; a++){
 			if(pc.debug){
 				//draw_text(aa, bb, biome[floor(a / BW), floor(b / BH)]);
 				//draw_text(aa, bb, string(floor(a / BW)) + ", " + string(floor(b / BH)) );
-				//if(a % BW == 0){ draw_rectangle(aa, bb, aa+4, bb+64, true); }
-				//if(b % BH == 0){ draw_rectangle(aa, bb, aa+64, bb+4, true); }
+				if(a % BW == 0){ draw_rectangle(aa, bb, aa+4, bb+64, true); }
+				if(b % BH == 0){ draw_rectangle(aa, bb, aa+64, bb+4, true); }
 				
 			}
 		}

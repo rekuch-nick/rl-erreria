@@ -23,12 +23,18 @@ thinkCD --; if(thinkCD < 1){
 
 var bump = false;
 xSpeed = moveSpeed * dir;
-for(var i=0; i<abs(moveSpeed); i++){
-	xx += dir;
-	x += dir;
+if(xPush != 0){
+	xSpeed = xPush;
+	if(xPush > 0){ xPush --; }
+	if(xPush < 0){ xPush ++; }
+	if(abs(xPush) < 1){ xPush = 0; }
+}
+for(var i=0; i<abs(xSpeed); i++){
+	xx += getDir(xSpeed);
+	x += getDir(xSpeed);
 	if(creatureInBlock()){
-		xx -= dir;
-		x -= dir;
+		xx -= getDir(xSpeed);
+		x -= getDir(xSpeed);
 		bump = true;
 		break;
 	}
@@ -75,6 +81,7 @@ for(var i=0; i<abs(ySpeed); i++){
 if(dir < 0 && image_xscale > 0){ image_xscale *= -1; }
 if(dir > 0 && image_xscale < 0){ image_xscale *= -1; }
 
+if(hurtTime > 0){ hurtTime --; }
 
 
 setSpots(xx, yy);
@@ -83,4 +90,12 @@ if(x > room_width * 2 || x < -room_width ||
 	y > room_height * 2 || y < -room_height ){
 		
 	instance_destroy();
+}
+
+if(hp < 1){
+	
+	instance_destroy();
+	if(drop != noone && roll(dropChance)){
+		pupSpawn(x, y, drop);
+	}
 }

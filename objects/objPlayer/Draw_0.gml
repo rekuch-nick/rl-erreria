@@ -3,6 +3,11 @@ if(debug){
 	draw_circle_color(x, y, 48, c_aqua, c_white, false);
 	draw_set_alpha(1);
 }
+
+var f = 0; image_alpha = 1;
+if(pc.hurtTime > 0){ f = 4; image_alpha = random_range(.5, 1); }
+image_index = f;
+
 draw_self();
 
 if(debug){

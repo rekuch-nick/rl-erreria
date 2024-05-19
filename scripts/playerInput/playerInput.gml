@@ -44,6 +44,9 @@ function playerInput(){
 	}
 	
 	
+	if(xIn == 0){ xHoldTime = 0; } else { xHoldTime ++; }
+	if(yIn == 0){ yHoldTime = 0; } else { yHoldTime ++; }
+	
 	
 	
 	//

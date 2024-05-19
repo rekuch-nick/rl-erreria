@@ -1,6 +1,9 @@
 event_inherited();
 
 
+drop = getItem("Gel");
+dropChance = 40;
+
 moveSpeed = 3;
 jumpPow = -12;
 

@@ -9,7 +9,7 @@ txt = "";
 txtCol = c_white;
 txtSize = 1;
 rot = 0;
-
+scroll = true;
 
 //xx = pc.xx + (x - pc.x);
 //yy = pc.yy + (y - pc.y);

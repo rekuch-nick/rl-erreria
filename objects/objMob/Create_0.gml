@@ -23,6 +23,19 @@ jumpAnytime = 0;
 
 jumpInAir = 0;
 
+pushMod = 1;
+xPush = 0;
+
+hurtTime = 0;
+
+hp = 10;
+hpMax = 10;
+armor = 0;
+
+bumpMight = 6;
+
+dropChance = 0;
+drop = noone;
 
 var c = cordScreenToLogic(x, y);
 xx = c.a;

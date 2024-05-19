@@ -1,3 +1,9 @@
+inGameMS ++;
+if(inGameMS >= 30){ inGameMS = 0; inGameSec ++; }
+if(inGameSec >= 60){ inGameSec = 0; inGameMin ++; }
+if(inGameMin >= 60){ inGameMin = 0; inGameHour ++; }
+
+
 if(state == State.gen){
 	wwRoll();
 	state = State.play;

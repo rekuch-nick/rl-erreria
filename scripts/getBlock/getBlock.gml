@@ -22,10 +22,21 @@ function getBlock(i){
 	
 	
 	
+	if(i == imgBlockSlime){ return { 
+		img: imgBlockSlime, dam: 0, fra: choose(1, 0), 
+		con: getItem("Gel"), damMax: 10, minMight: 1, 
+	} }
+	
+	
 	
 	
 	if(i == imgBlockDirtUnbreakable){ return { 
 		img: imgBlockDirtUnbreakable, dam: 0, fra: 0, 
+		con: noone, damMax: -1, minMight: 1000,
+	} }
+	
+	if(i == imgBlockLava){ return { 
+		img: imgBlockLava, dam: 0, fra: 0, 
 		con: noone, damMax: -1, minMight: 1000,
 	} }
 	

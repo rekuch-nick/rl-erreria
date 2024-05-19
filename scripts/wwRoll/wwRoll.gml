@@ -1,5 +1,17 @@
 function wwRoll(){
 	
+	
+	var s = "123";
+	val = 0;
+	for(var i=0; i<string_length(s); i++){
+		var v = ord(string_char_at(s, i));
+		val += v;
+	}
+	
+	
+	
+	random_set_seed(val);
+	
 	wwSetup();
 	for(var a=0; a<W; a++){ for(var b=0; b<H; b++){
 		bgmap[a, b] = noone;
@@ -13,9 +25,9 @@ function wwRoll(){
 	
 	
 	
-	var gl = 47;
+	var gl = 97;
 	for(var a=0; a<W; a++){
-		gl = clamp(gl + choose(0, 0, 0, 1, -1), 44, 49);
+		gl = clamp(gl + choose(0, 0, 0, 1, -1), 94, 99);
 		for(var b=0; b<gl; b++){ 
 			bmap[a, b] = noone; 
 		}
@@ -31,7 +43,7 @@ function wwRoll(){
 	
 	
 	
-	var caveTop = 51;
+	var caveTop = 101;
 	for(var a=0; a<W; a++){ for(var b=0; b<caveTop; b++){
 		bgmap[a, b] = imgBGSky;
 	}}
@@ -47,7 +59,7 @@ function wwRoll(){
 			tempMap[a, b] = bmap[a, b];
 	}}
 	
-	for(var s=0; s<2; s++){
+	for(var s=0; s<3; s++){
 		for(var a=0; a<W; a++){ for(var b=caveTop; b<H; b++){
 			var adj = 0; var space = 0;
 			for(var xx=a-1; xx<=a+1; xx++){ for(var yy=b-1; yy<=b+1; yy++){
@@ -70,12 +82,24 @@ function wwRoll(){
 	
 	
 	
+	for(var a=0; a<W; a++){
+		bmap[a, 349] = imgBlockLava;
+	}
 	
 	
 	
-	
-	
-	
+	//replace dirt
+	for(var a=0; a<W; a++){ for(var b=0; b<H; b++){
+		xB = floor(a / 50); yB = floor(b / 50);
+		if(bmap[a, b] == imgBlockDirt){
+			
+			if(biome[xB, yB] == Biome.cave && roll( (b-100) / 2)){ bmap[a, b] = imgBlockDirtRock; }
+			if(biome[xB, yB] == Biome.deepCave){ bmap[a, b] = imgBlockRock; }
+			if(biome[xB, yB] == Biome.lavaCave){ bmap[a, b] = imgBlockRock; }
+			
+			if(biome[xB, yB] == Biome.slime && roll(30)){ bmap[a, b] = imgBlockSlime; }
+		}
+	}}
 	
 	
 	
@@ -87,68 +111,6 @@ function wwRoll(){
 		if(bmap[a, b] != noone){ bmap[a, b] = getBlock(bmap[a, b]); }
 	}}
 	
-	
-	
-	/*
-	
-	
-	for(var a=0; a<W/BW; a++){
-		for(var b=0; b<H/BH; b++){
-			biome[a, b] = Biome.pockets;
-		}
-	}
-	for(var a=0; a<=W/BW; a++){
-		biome[a, 0] = Biome.surface;
-	}
-	biome[4, 1] = Biome.chasm;
-	biome[4, 2] = Biome.smooth;
-	
-	
-	
-	
-	
-	for(var a=0; a<W/BW; a++){ for(var b=0; b<H/BH; b++){
-		
-		if(biome[a, b] == Biome.surface){ wwRollSurface(a, b); }
-		if(biome[a, b] == Biome.pockets){ wwRollPockets(a, b); }
-		if(biome[a, b] == Biome.smooth){ wwRollSmooth(a, b); }
-		if(biome[a, b] == Biome.chasm){ wwRollChasm(a, b); }
-
-		
-	}}
-	
-	*/
-	
-	
-	//standard replace
-	/*
-	for(var a=0; a<W; a++){
-		for(var b=0; b<H; b++){
-			
-			
-			
-			/*
-			if(b > groundLevel[a]){
-				bmap[a, b] = getBlock(imgBlockDirt);
-				if(roll(b)){ bmap[a, b] = getBlock(imgBlockDirtRock); }
-				
-				
-				if(a < 11 || a >= W - 11){
-					bmap[a, b] = getBlock(imgBlockDirtUnbreakable);
-				}
-			}*//*
-			if(b > groundLevel[a]){
-				bmap[a, b] = getBlock(imgBlockDirt);
-				if(roll(b)){ bmap[a, b] = getBlock(imgBlockDirtRock); }
-				
-				
-				if(a < 11 || a >= W - 11){
-					bmap[a, b] = getBlock(imgBlockDirtUnbreakable);
-				}
-			}*/
-			
-		//}
-	//}
 	
 	
 }

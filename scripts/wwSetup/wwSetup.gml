@@ -16,11 +16,14 @@ function wwSetup(){
 	
 	
 	for(var a=0; a<W/BW; a++){
-		for(var b=0; b<H/BH; b++){
-			biome[a, b] = Biome.pockets;
-			
-		}
+		biome[a, 0] = Biome.sky;
+		biome[a, 1] = Biome.surface;
+		biome[a, 2] = Biome.cave;
+		biome[a, 3] = Biome.cave;
+		biome[a, 4] = Biome.deepCave;
+		biome[a, 5] = Biome.deepCave;
+		biome[a, 6] = Biome.lavaCave;
 	}
 	
-	
+	biome[2, 3] = Biome.slime;
 }

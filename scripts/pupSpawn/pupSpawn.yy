@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"pupSpawn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pupSpawn",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
