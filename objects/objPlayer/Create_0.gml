@@ -1,6 +1,7 @@
 image_xscale = 4; image_yscale = 4;
 xx = 672; yy = 384;
 xx = 200 * 64; yy = 92 * 64;
+xx = floor(ww.W / 2) * 64;
 playerNFrom();
 playerInput();
 setSpots(xx, yy);
@@ -21,6 +22,7 @@ ySpeed = 0;
 jumps = 0;
 jumpsMax = 1;
 jumpPow = -24;
+yPush = 0;
 
 hp = 100;
 hpMax = 100;
@@ -60,15 +62,19 @@ actCD = 0;
 
 bag[0].item = getItem("Sword");
 bag[1].item = getItem("Pickaxe");
-bag[2].item = getItem("Platform"); bag[2].item.stack = 2;
+//bag[2].item = getItem("Platform"); bag[2].item.stack = 2;
 
-bag[8].item = getItem("Hop n Tops");
-bag[9].item = getItem("Armor");
-bag[10].item = getItem("Sonic Gear");
+//bag[8].item = getItem("Hop n Tops");
+//bag[9].item = getItem("Armor");
+//bag[10].item = getItem("Sonic Gear");
 
 for(var i=0; i<100; i++){
 	mat[i] = 0;
+	buff[i] = 0;
 }
+//mat[Mat.wood] = 100;
+mat[Mat.gold] = 100;
+
 
 hurtTime = 0;
 

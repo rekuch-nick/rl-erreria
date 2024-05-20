@@ -1,6 +1,6 @@
 function zNums(){
 	enum State {
-		title, play, gen, pause,
+		title, play, gen, pause, shop,
 	}
 	
 	enum Use {
@@ -8,13 +8,16 @@ function zNums(){
 	}
 	
 	enum Biome {
-		surface, sky,
+		surface, sky, home,
 		cave, midCave, deepCave, lavaCave,
 		slime,
 	}
 	
 	enum Mat {
-		wood, gel, iron, gold
+		wood, gel, 
+		gold, mythril, adamantite,
+		core,
+		
 	}
 	
 	enum Slot {
@@ -27,7 +30,15 @@ function zNums(){
 	}
 	
 	enum Passive {
-		multijump, armor, moveFast,
+		multijump, armor, moveFast, regen,
+	}
+	
+	enum Pot {
+		healing, stoneskin, might,
+	}
+	
+	enum Buff {
+		regen, stoneskin, might,
 	}
 	
 	

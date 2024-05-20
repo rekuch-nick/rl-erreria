@@ -19,4 +19,6 @@ if(inBounds(xSpot, ySpot)){
 			}
 		}
 	}
+	
+	featureBreak(xSpot, ySpot);
 }

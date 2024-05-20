@@ -17,7 +17,22 @@ function playerStepBag(){
 	
 	if(pressedJump){
 		
-		if(xSICur == -1){
+		if(xICur == xSICur && yICur == ySICur){
+			var si = getObjectAtSpot(objItemSlot, xICur, yICur).item;
+			if(si.menuUse != noone){
+				playerUsePot(si.menuUse);
+				
+				if(si.consumeOnUse){
+					si.stack --;
+					if(si.stack < 1){
+						getObjectAtSpot(objItemSlot, xICur, yICur).item = noone;
+					}
+				}
+			}
+			
+			xSICur = -1; ySICur = -1;
+			playerStats();
+		} else if(xSICur == -1){
 			var si = getObjectAtSpot(objItemSlot, xICur, yICur);
 			//if(si != noone){
 				selectedItem = getObjectAtSpot(objItemSlot, xICur, yICur);
@@ -43,7 +58,7 @@ function playerStepBag(){
 				if(bag[i].item != noone && bag[i].item.action == noone){ illegal = true; }
 			}
 			for(var i=3; i<8; i++){
-				if(bag[i].item != noone && bag[i].item.passive == []){ illegal = true; }
+				if(bag[i].item != noone && array_length(bag[i].item.passive) < 1){ illegal = true; }
 			}
 			tags = [];
 			for(var i=3; i<8; i++){

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"wwJars",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wwJars",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

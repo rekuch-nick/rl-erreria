@@ -18,6 +18,8 @@ function blockBreak(a, b){
 	
 	
 	//remove features on top of block
+	featureBreak(a, b-1);
+	/*
 	var i = 1;
 	do {
 		var ok = false;	
@@ -26,5 +28,5 @@ function blockBreak(a, b){
 			ok = true;
 			i ++;
 		}
-	} until ( !ok );
+	} until ( !ok ); */
 }

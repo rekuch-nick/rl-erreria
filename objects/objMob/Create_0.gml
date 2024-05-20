@@ -23,6 +23,8 @@ jumpAnytime = 0;
 
 jumpInAir = 0;
 
+jumpReverse = 0;
+
 pushMod = 1;
 xPush = 0;
 

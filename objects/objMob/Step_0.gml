@@ -15,7 +15,7 @@ thinkCD --; if(thinkCD < 1){
 		if(xx > pc.xx){ dir = -1; }
 		if(xx < pc.xx){ dir = 1; }
 	}
-	
+	if(roll(jumpReverse)){ jumpPow *= -1; }
 }
 
 

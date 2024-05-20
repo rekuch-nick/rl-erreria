@@ -9,12 +9,14 @@ playerInput();
 if(pressedStart && ww.state == State.play){
 	ww.state = State.pause;
 } else if(pressedStart && ww.state == State.pause){
+	xSICur = -1; ySICur = -1;
 	ww.state = State.play;
 }
 
 
 
 if(ww.state == State.pause){ playerStepBag(); }
+if(ww.state == State.shop){ playerStepShop(); }
 
 
 
@@ -27,6 +29,15 @@ if(inPlayMin >= 60){ inPlayMin = 0; inPlayHour ++; }
 
 if(inPlayMS == 0){
 	mp = clamp(mp + mpRegen, 0, mpMax);
+	hp = clamp(hp + hpRegen, 0, hpMax);
+	if(buff[Buff.regen]){ hp = clamp(hp + 5, 0, hpMax); }
+}
+
+
+
+
+for(var i=0; i<100; i++){
+	if(buff[i] > 0){ buff[i] --; }
 }
 
 
@@ -71,7 +82,10 @@ if(!debug){
 }
 
 
-
+if(yPush != 0){
+	ySpeed = yPush;
+	yPush += getDir(yPush) * -1;
+}
 var yMoved = 0;
 for(var i=0; i<abs(ySpeed); i++){
 	yy += getDir(ySpeed);
@@ -91,6 +105,13 @@ for(var i=0; i<abs(ySpeed); i++){
 moveEverything(xMoved, yMoved);
 
 
+
+
+
+if(yIn < 0 && inBounds(xSpot, ySpot) && ww.fmap[xSpot, ySpot] == imgDoor){
+	playerLoadShop(ww.fmap[xSpot, ySpot - 1]);
+	return;
+}
 
 
 if(actCD > 0){ actCD --; } else {

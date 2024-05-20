@@ -1,6 +1,6 @@
 room_speed = 30;
 draw_set_font(fntPlain);
-W = 400;
+W = 450;
 H = 350;
 BW = 50; BH = 50;
 ww.depth = -100;

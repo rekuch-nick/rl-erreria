@@ -2,10 +2,12 @@ event_inherited();
 
 
 drop = getItem("Gel");
+if(irandom_range(1, 10) == 1){ drop = getItem("Healing Potion"); }
 dropChance = 40;
 
 moveSpeed = 3;
 jumpPow = -12;
+
 
 thinkCD = 0; 
 

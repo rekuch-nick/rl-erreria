@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"playerStepShop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerStepShop",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

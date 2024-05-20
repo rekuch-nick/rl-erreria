@@ -18,11 +18,19 @@ if(debug){
 //draw_text(x, y - 60, string((yy+33) / 64));
 
 
-if(ww.state == State.pause){
+if(ww.state == State.pause || ww.state == State.shop){
 	draw_sprite_ext(imgScreenBag, 0, 0, 0, 4, 4, 0, c_white, 1);
-	draw_sprite_stretched(imgPupWood, 0, 2 * 64 + 32, 2 * 64 + 32, 64, 64);
-	draw_text(4 * 64, 2 * 64 + 48, string(pc.mat[Mat.wood]));
 	
-	draw_sprite_stretched(imgPupGel, 0, 2 * 64 + 32, 3 * 64 + 32, 64, 64);
-	draw_text(4 * 64, 3 * 64 + 48, string(pc.mat[Mat.gel]));
+	var aa = 2 * 64 + 32; var bb = 2 * 64 + 32;
+	for(var i=0; i<6; i++){
+		if(pc.mat[i] > 0){
+			draw_sprite_stretched(matImage(i), 0, aa, bb, 64, 64);
+			draw_text(aa + 96, bb + 16, string(pc.mat[i]));
+			bb += 64;
+		}
+	}
+	
+	
+	
+	
 }

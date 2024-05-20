@@ -23,6 +23,12 @@ function playerStats(){
 	moveSpeed = 10;
 	moveSpeed += playerPassivePower(Passive.moveFast);
 	
+	shine = 2;
+	
+	
+	hpRegen = 0;
+	hpRegen += playerPassivePower(Passive.regen);
+	
 	jumps = clamp(jumps, 0, jumpsMax);
 	hp = clamp(hp, 0, hpMax);
 	mp = clamp(mp, 0, mpMax);

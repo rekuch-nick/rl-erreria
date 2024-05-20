@@ -20,7 +20,9 @@ if(xSpeed != 0){
 }
 
 
-if(!pointInBlock(xx, yy + 1) && !pointInPlat(xx, yy + 1)){
+if(!pointInBlock(xx, yy + 1) && !pointInPlat(xx, yy + 1) &&
+	!pointInBlock(xx, yy + 17) && !pointInPlat(xx, yy + 17)
+						){
 	ySpeed = clamp(ySpeed + 1, -128, 128);
 } else {
 	if(ySpeed > 0){ ySpeed = 0; }
@@ -36,7 +38,9 @@ if(ySpeed != 0){
 			yy -= getDir(ySpeed);
 			break;
 		}
-		if(ySpeed > 0 && pointInBlock(xx, yy + 1 || pointInPlat(xx, yy + 1))){
+		if(ySpeed > 0 && ( pointInBlock(xx, yy + 1) || pointInPlat(xx, yy + 1) ||
+							pointInBlock(xx, yy + 17) || pointInPlat(xx, yy + 17)
+									) ){
 			if(bounce > 0){
 				bounce --;
 				ySpeed = bouncePow;
@@ -55,6 +59,8 @@ if(got){
 		pc.mat[mat] += amnt;
 	} else if(item.canStack && itemInSlot(item.nam) != -1){
 		pc.bag[itemInSlot(item.nam)].item.stack += item.stack;
+	} else if(!item.canStack && itemInSlot(item.nam) != -1){
+		pc.mat[item.matCore] += 1;
 	} else {
 		var n = itemFreeSlot();
 		if(n != -1){
@@ -67,5 +73,14 @@ if(got){
 	e.sprite_index = sprite_index;
 	e.fade = .03;
 	
+	instance_destroy();
+	return;
+}
+
+
+
+if(x > room_width * 2 || x < -room_width ||
+	y > room_height * 2 || y < -room_height ){
+		
 	instance_destroy();
 }

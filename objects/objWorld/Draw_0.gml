@@ -11,6 +11,22 @@ for(var a=x1; a<=x2; a++){
 		
 		var aa = 0 + (a * 64) - pc.xFrom;
 		var bb = 0 + (b * 64) - pc.yFrom;
+		
+		if(!vmap[a, b]){
+			//if adjacent block has vmap = true & that block is null, set vmap = true
+			for(var aaa=a-1; aaa<a+2; aaa++){ for(var bbb=b-1; bbb<b+2; bbb++){
+				if(inBounds(aaa, bbb)){
+					if(abs(pc.xSpot - a) < pc.shine && abs(pc.ySpot - b) < pc.shine){ vmap[a, b] = true; }
+					
+					if(vmap[aaa, bbb] && bmap[aaa, bbb] == noone){
+						vmap[a, b] = true; break;
+					}
+				}
+			}}
+			
+		}
+		
+		if(!vmap[a, b]){ continue; }	
 			
 		if(bgmap[a, b] != noone){
 			draw_sprite_stretched(bgmap[a, b], 0, aa, bb, 64, 64);
@@ -42,13 +58,15 @@ for(var a=x1; a<=x2; a++){
 				draw_sprite_stretched(imgBlockCrack, f, aa, bb, 64, 64);
 			}
 			//draw_text(aa, bb, t.dam);
-			if(pc.debug){
-				//draw_text(aa, bb, biome[floor(a / BW), floor(b / BH)]);
-				//draw_text(aa, bb, string(floor(a / BW)) + ", " + string(floor(b / BH)) );
-				if(a % BW == 0){ draw_rectangle(aa, bb, aa+4, bb+64, true); }
-				if(b % BH == 0){ draw_rectangle(aa, bb, aa+64, bb+4, true); }
+			
+		}
+		
+		if(pc.debug){
+			//draw_text(aa, bb, biome[floor(a / BW), floor(b / BH)]);
+			//draw_text(aa, bb, string(floor(a / BW)) + ", " + string(floor(b / BH)) );
+			if(a % BW == 0){ draw_rectangle(aa, bb, aa+4, bb+64, true); }
+			if(b % BH == 0){ draw_rectangle(aa, bb, aa+64, bb+4, true); }
 				
-			}
 		}
 		
 		

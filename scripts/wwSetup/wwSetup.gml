@@ -10,6 +10,7 @@ function wwSetup(){
 			pmap[a, b] = noone;
 			bmap[a, b] = noone;
 			
+			vmap[a, b] = false;
 		}
 	}
 	
@@ -24,6 +25,7 @@ function wwSetup(){
 		biome[a, 5] = Biome.deepCave;
 		biome[a, 6] = Biome.lavaCave;
 	}
+	//biome[floor((W/2) / 50), 1] = Biome.home;
 	
 	biome[2, 3] = Biome.slime;
 }
