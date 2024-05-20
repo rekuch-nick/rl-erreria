@@ -13,3 +13,9 @@ mob = objMobSlime;
 if(ww.biome[xB, yB] == Biome.cave){
 	mob = objMobBee;
 }
+
+if(ww.biome[xB, yB] == Biome.purp){
+	mob = objMobSlimePurp;
+}
+
+

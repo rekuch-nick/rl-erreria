@@ -167,12 +167,16 @@ function wwRoll(){
 			if(biome[xB, yB] == Biome.lavaCave){ bmap[a, b] = imgBlockRock; }
 			
 			if(biome[xB, yB] == Biome.slime && roll(30)){ bmap[a, b] = imgBlockSlime; }
+			
+			
+			if(biome[xB, yB] == Biome.purp && bmap[a, b-1] == noone){ bmap[a, b] = imgBlockGrassPurp; }
 		}
 	}}
 	
 	
 	//plants
 	for(var a=0; a<W; a++){ for(var b=2; b<H; b++){
+		xB = floor(a / 50); yB = floor(b / 50);
 		
 		if(bmap[a, b] == imgBlockGrass && fmap[a, b - 1] == noone){
 			if(irandom_range(0, 4) == 1){ 
@@ -180,6 +184,13 @@ function wwRoll(){
 			} else if(irandom_range(0, 2) == 1){ 
 				fmap[a, b - 1] = imgBushBot; 
 				fmap[a, b - 2] = imgBushTop; 
+			}
+		}
+		
+		
+		if(bmap[a, b] == imgBlockGrassPurp && fmap[a, b - 1] == noone){
+			if(irandom_range(0, 4) == 1){ 
+				fmap[a, b - 1] = imgBushPurp;
 			}
 		}
 		

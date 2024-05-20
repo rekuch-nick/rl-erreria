@@ -61,6 +61,9 @@ function getBlock(i){
 	
 	
 	
-	
+	return {
+		img: i, dam:0, fra: irandom_range(0, sprite_get_number(i) - 1),
+		con: noone, damMax: 10, minMight: 1,
+	}
 	
 }
