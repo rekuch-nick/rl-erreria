@@ -28,5 +28,6 @@ function wwSetup(){
 	//biome[floor((W/2) / 50), 1] = Biome.home;
 	
 	biome[2, 3] = Biome.slime;
+	biome[3, 3] = Biome.specs;
 	biome[4, 3] = Biome.purp;
 }

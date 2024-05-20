@@ -107,6 +107,8 @@
     {"id":{"name":"all_assets_jewlery","path":"sprites/all_assets_jewlery/all_assets_jewlery.yy",},},
     {"id":{"name":"imgBars","path":"sprites/imgBars/imgBars.yy",},},
     {"id":{"name":"imgBGCave","path":"sprites/imgBGCave/imgBGCave.yy",},},
+    {"id":{"name":"imgBGCaveSlime","path":"sprites/imgBGCaveSlime/imgBGCaveSlime.yy",},},
+    {"id":{"name":"imgBGCaveSpecs","path":"sprites/imgBGCaveSpecs/imgBGCaveSpecs.yy",},},
     {"id":{"name":"imgBGSky","path":"sprites/imgBGSky/imgBGSky.yy",},},
     {"id":{"name":"imgBlank","path":"sprites/imgBlank/imgBlank.yy",},},
     {"id":{"name":"imgBlockAdamantite","path":"sprites/imgBlockAdamantite/imgBlockAdamantite.yy",},},

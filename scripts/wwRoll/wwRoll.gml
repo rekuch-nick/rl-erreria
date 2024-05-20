@@ -171,6 +171,10 @@ function wwRoll(){
 			
 			if(biome[xB, yB] == Biome.purp && bmap[a, b-1] == noone){ bmap[a, b] = imgBlockGrassPurp; }
 		}
+		
+		
+		if(biome[xB, yB] == Biome.specs && roll(60)){ bgmap[a, b] = imgBGCaveSpecs; }
+		if(biome[xB, yB] == Biome.slime && roll(40)){ bgmap[a, b] = imgBGCaveSlime; }
 	}}
 	
 	

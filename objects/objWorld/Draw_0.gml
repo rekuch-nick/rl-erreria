@@ -29,7 +29,8 @@ for(var a=x1; a<=x2; a++){
 		if(!vmap[a, b]){ continue; }	
 			
 		if(bgmap[a, b] != noone){
-			draw_sprite_stretched(bgmap[a, b], 0, aa, bb, 64, 64);
+			var i = (a + b) % sprite_get_number(bgmap[a, b]);
+			draw_sprite_stretched(bgmap[a, b], i, aa, bb, 64, 64);
 		}
 		
 		if(fmap[a, b] != noone){
