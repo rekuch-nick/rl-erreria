@@ -129,7 +129,10 @@ function wwRoll(){
 	
 	
 	
-	
+	for(var a=0; a<W/BW; a++){
+		wwChestHouseInBiome(a, 2, imgBlockChest);
+		wwChestHouseInBiome(a, 2, imgBlockChest);
+	}
 	
 	
 	
@@ -150,8 +153,8 @@ function wwRoll(){
 	
 	
 	for(var a=0; a<W/BW; a++){
-		wwChestInBiome(a, 2, imgBlockChest);
-		wwChestInBiome(a, 2, imgBlockChest);
+		//wwChestInBiome(a, 2, imgBlockChest);
+		//wwChestInBiome(a, 2, imgBlockChest);
 	}
 	
 	

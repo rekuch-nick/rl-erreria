@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"wwChestHouseInBiome",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wwChestHouseInBiome",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
