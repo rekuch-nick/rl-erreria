@@ -37,7 +37,7 @@ function wwChestHouseInBiome(aaa, bbb, t){
 				if(a == aa || a == aa+w-1 || b == bb || b == bb+h-1){
 					bmap[a, b] = wall;
 				}
-				if(b == bb+h-1){ pmap[a, b + 1] = imgPlatWood; }
+				if(b == bb+h-1){ pmap[a, b] = imgPlatWood; }
 			}}
 			a = aa + floor(w / 2);
 			b = bb + h - 2;

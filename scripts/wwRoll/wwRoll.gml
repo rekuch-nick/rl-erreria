@@ -30,10 +30,10 @@ function wwRoll(){
 		gl = clamp(gl + choose(0, 0, 0, 1, -1), 94, 99);
 		for(var b=0; b<gl; b++){ 
 			bmap[a, b] = noone; 
-			vmap[a, b] = true;
+			//vmap[a, b] = true;
 		}
 		bmap[a, gl] = imgBlockGrass;
-		vmap[a, gl] = true;
+		//vmap[a, gl] = true;
 		
 		//if(irandom_range(0, 4) == 1){ 
 		//	fmap[a, gl - 1] = imgBush;
@@ -96,11 +96,15 @@ function wwRoll(){
 	}
 	
 	
-	for(var a=0; a<xBuffer; a++){ for(var b=0; b<H; b++){  
-		bmap[a, b] = imgBlockDirtUnbreakable; //
+	for(var a=0; a<xBuffer; a++){ for(var b=0; b<H; b++){ 
+		var t = b >= 93 ? imgBlockDirtUnbreakable : imgBlockSky;
+		t = imgBlockDirtUnbreakable;
+		bmap[a, b] = t; //
 	}}
 	for(var a=W-xBuffer; a<W; a++){ for(var b=0; b<H; b++){  
-		bmap[a, b] = imgBlockDirtUnbreakable; //
+		var t = b >= 93 ? imgBlockDirtUnbreakable : imgBlockSky;
+		t = imgBlockDirtUnbreakable;
+		bmap[a, b] = t; //
 	}}
 	
 	
@@ -170,6 +174,8 @@ function wwRoll(){
 			if(biome[xB, yB] == Biome.lavaCave){ bmap[a, b] = imgBlockRock; }
 			
 			if(biome[xB, yB] == Biome.slime && roll(30)){ bmap[a, b] = imgBlockSlime; }
+			
+			if(biome[xB, yB] == Biome.lice && roll(30)){ bmap[a, b] = imgBlockDirtEgg; }
 			
 			
 			if(biome[xB, yB] == Biome.purp && bmap[a, b-1] == noone){ bmap[a, b] = imgBlockGrassPurp; }

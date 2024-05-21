@@ -2,12 +2,19 @@ function blockBreak(a, b){
 	if(!inBounds(a, b)){ return; }
 	
 	if(ww.bmap[a, b].con != noone){
-		var c = cordLogicToScreen(a * 64 + 32, b * 64 + 32);
-		pupSpawn(c.a, c.b, ww.bmap[a, b].con);
-		//var e = instance_create_depth(c.a, c.b, ww.layerP, objPup);
-		//e.item = ww.bmap[a, b].con;
-		//e.mat = ww.bmap[a, b].con.mat;
-		//e.sprite_index = ww.bmap[a, b].con.img;
+		
+		try{
+			
+			if(object_get_parent(ww.bmap[a, b].con) == objMob){
+				var c = cordLogicToScreen(a * 64 + 32, b * 64 + 32);
+				instance_create_depth(c.a, c.b, ww.layerM, ww.bmap[a, b].con);	
+			}
+		} catch (e) {
+		
+			var c = cordLogicToScreen(a * 64 + 32, b * 64 + 32);
+			pupSpawn(c.a, c.b, ww.bmap[a, b].con);
+		}
+		
 	}
 	
 	

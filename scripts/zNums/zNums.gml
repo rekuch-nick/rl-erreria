@@ -10,7 +10,7 @@ function zNums(){
 	enum Biome {
 		surface, sky, home,
 		cave, midCave, deepCave, lavaCave,
-		slime, purp, specs,
+		slime, purp, specs, lice,
 	}
 	
 	enum Mat {

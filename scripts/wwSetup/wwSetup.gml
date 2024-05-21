@@ -30,4 +30,5 @@ function wwSetup(){
 	biome[2, 3] = Biome.slime;
 	biome[3, 3] = Biome.specs;
 	biome[4, 3] = Biome.purp;
+	biome[5, 3] = Biome.lice;
 }

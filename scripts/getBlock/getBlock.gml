@@ -49,7 +49,7 @@ function getBlock(i){
 	
 	
 	
-	if(i == imgBlockDirtUnbreakable){ return { 
+	if(i == imgBlockDirtUnbreakable || i == imgBlockSky ){ return { 
 		img: i, dam: 0, fra: 0, 
 		con: noone, damMax: -1, minMight: 1000,
 	} }
@@ -59,7 +59,10 @@ function getBlock(i){
 		con: noone, damMax: -1, minMight: 1000,
 	} }
 	
-	
+	if(i == imgBlockDirtEgg){ return { 
+		img: i, dam:0, fra: irandom_range(0, sprite_get_number(i) - 1),
+		con: objMobEggLice, damMax: 15, minMight: 1,
+	} }
 	
 	return {
 		img: i, dam:0, fra: irandom_range(0, sprite_get_number(i) - 1),
