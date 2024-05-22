@@ -10,6 +10,9 @@ function playerInput(){
 	
 	pressedStart = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_escape) ||
 					gamepad_button_check_pressed(gamepadID, gp_start);
+					
+	pressedMap = keyboard_check_pressed(ord("M")) ||
+					gamepad_button_check_pressed(gamepadID, gp_select);
 	
 	
 	xIn = 0;

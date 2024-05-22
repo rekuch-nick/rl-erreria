@@ -1,6 +1,6 @@
 function zNums(){
 	enum State {
-		title, play, gen, pause, shop,
+		title, play, gen, pause, shop, map,
 	}
 	
 	enum Use {

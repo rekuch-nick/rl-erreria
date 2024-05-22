@@ -13,6 +13,9 @@ if(pressedStart && ww.state == State.play){
 	ww.state = State.play;
 }
 
+if(pressedMap){
+	ww.state = ww.state == State.map ? State.play : State.map;	
+}
 
 
 if(ww.state == State.pause){ playerStepBag(); }

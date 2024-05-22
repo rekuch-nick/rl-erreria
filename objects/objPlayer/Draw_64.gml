@@ -36,3 +36,34 @@ if(ww.state == State.shop){
 	
 	draw_sprite_stretched(imgShopCur, inPlaySec % 2, 820, 94 + (cur * 160), 32, 32);
 }
+
+
+if(ww.state == State.map){
+	draw_rectangle_color(0, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
+	
+	for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
+		var c = c_black;
+		if(ww.bmap[a, b] != noone){ 
+			c = c_orange;
+		
+			if(ww.bmap[a, b].img == imgDoor || ww.bmap[a, b].img == imgBlockChest){
+				c = c_lime;
+			}
+			if(ww.fmap[a, b] == imgJar ){
+				c = c_grey;
+			}
+		}
+		
+		if(pc.xSpot == a && pc.ySpot == b){
+			c = c_white;
+			if(ww.inGameMS % 2 == 1){ c = c_aqua; }
+		}
+		
+		draw_rectangle_color(a*2, b*2, a*2 + 1, b*2 + 1, c, c, c, c, 0);
+	}}
+	
+	
+}
+	
+
+
