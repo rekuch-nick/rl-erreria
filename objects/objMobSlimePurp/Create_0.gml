@@ -7,7 +7,8 @@ dropChance = 40;
 
 hp = 40;
 hpMax = 40;
-bumpMight = 16;
+bumpMight = 8;
+bumpPoisons = 60;
 
 
 moveSpeed = 3;

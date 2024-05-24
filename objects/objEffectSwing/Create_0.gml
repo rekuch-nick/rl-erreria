@@ -10,3 +10,9 @@ setSpots(xx, yy);
 scroll = false;
 
 mobsHit = [];
+
+burnChance = 0;
+burnPow = 0;
+
+poisonChance = 0;
+poisonPow = 0;

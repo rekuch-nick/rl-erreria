@@ -5,6 +5,7 @@ xx = floor(ww.W / 2) * 64;
 playerNFrom();
 playerInput();
 setSpots(xx, yy);
+//xSpotFirst = xSpot; ySpotFirst = ySpot;
 
 inPlayMS = 0;
 inPlaySec = 0;
@@ -67,13 +68,16 @@ bag[1].item = getItem("Pickaxe");
 //bag[8].item = getItem("Hop n Tops");
 //bag[9].item = getItem("Armor");
 //bag[10].item = getItem("Sonic Gear");
+//bag[11].item = getItem("Body Ring");
 
 for(var i=0; i<100; i++){
 	mat[i] = 0;
 	buff[i] = 0;
 }
 //mat[Mat.wood] = 100;
-mat[Mat.gold] = 100;
+//mat[Mat.gold] = 100;
+//mat[Mat.mythril] = 100;
+//mat[Mat.adamantite] = 100;
 
 
 hurtTime = 0;
@@ -82,4 +86,3 @@ hurtTime = 0;
 
 
 playerStats();
-

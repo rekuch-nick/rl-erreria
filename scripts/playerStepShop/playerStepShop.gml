@@ -31,10 +31,13 @@ function playerStepShop(){
 			var ii = sItm[cur];
 			if(ii.makeWith1 != noone && mat[ii.makeWith1] < ii.makeCost1){ canMake = false; }
 			if(ii.makeWith2 != noone && mat[ii.makeWith2] < ii.makeCost2){ canMake = false; }
+			if(ii.makeReq != noone && itemInSlot(ii.makeReq) == -1){ canMake = false; }
 			if(canMake){
 				if(ii.makeWith1 != noone){ mat[ii.makeWith1] -= ii.makeCost1; }
 				if(ii.makeWith2 != noone){ mat[ii.makeWith2] -= ii.makeCost2; }
-				
+				if(ii.makeReq != noone){
+					pc.bag[itemInSlot(ii.makeReq)].item = noone;
+				}
 				pupSpawn(x, y - 64, getItem(ii.nam));
 			}
 		}

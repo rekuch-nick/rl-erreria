@@ -2,7 +2,16 @@ if(ww.state != State.play){ return; }
 
 
 
-
+for(var i=0; i<10; i++){
+	if(buff[i] > 0){ 
+		if(i == Buff.burn){ hp -= .2; }
+		if(i == Buff.poison){ hp -= .2; }
+		buff[i] --; 
+	}
+	
+	
+	
+}
 
 
 

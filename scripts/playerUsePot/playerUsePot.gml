@@ -13,4 +13,8 @@ function playerUsePot(p){
 	if(p == Pot.stoneskin){
 		pc.buff[Buff.stoneskin] = 30 * 120;
 	}
+	
+	if(p == Pot.shine){
+		pc.buff[Buff.shine] = 30 * 120;
+	}
 }

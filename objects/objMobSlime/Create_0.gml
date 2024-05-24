@@ -22,3 +22,4 @@ jumpOnBumb = 50;
 
 jumpAnytime = 1;
 jumpInAir = 0;
+

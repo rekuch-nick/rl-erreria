@@ -13,8 +13,10 @@ for(var a=x1; a<=x2; a++){
 		var bb = 0 + (b * 64) - pc.yFrom;
 		
 		if(!vmap[a, b]){
+			var vv = 1;
+			if(pc.buff[Buff.shine] > 0){ vv = 3; }
 			//if adjacent block has vmap = true & that block is null, set vmap = true
-			for(var aaa=a-1; aaa<a+2; aaa++){ for(var bbb=b-1; bbb<b+2; bbb++){
+			for(var aaa=a-vv; aaa<=a+vv; aaa++){ for(var bbb=b-vv; bbb<=b+vv; bbb++){
 				if(inBounds(aaa, bbb)){
 					if(abs(pc.xSpot - a) < pc.shine && abs(pc.ySpot - b) < pc.shine){ vmap[a, b] = true; }
 					

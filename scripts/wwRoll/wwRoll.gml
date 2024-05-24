@@ -122,14 +122,21 @@ function wwRoll(){
 	
 	//shops
 	shop[imgHouseSignWoodwork] = [ getItem("Platform"), getItem("Wooden Sword"), getItem("Wooden Armor"), noone ];
-	shop[imgHouseSignGoldsmith] = [ getItem("Gold Pickaxe"), getItem("Golden Sword"), getItem("Golden Helm"), noone ];
+	shop[imgHouseSignGoldsmith] = [ getItem("Gold Pickaxe"), getItem("Golden Sword"), getItem("Golden Armor"), noone ];
+	shop[imgHouseSignMythril] = [ getItem("Mythril Pickaxe"), getItem("Mythril Sword"), getItem("Mythril Armor"), noone ];
 	shop[imgHouseSignPick] = [ getItem("Gold Pickaxe"), getItem("Mythril Pickaxe"), getItem("Adamantite Pick"), noone ];
+	shop[imgHouseSignGel] = [ getItem("Wooden Sword"), getItem("Gel Sword"), getItem("Gel Sword"), noone ];
 	wwHouseInBiome(0, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(1, 2, imgHouseSignGoldsmith);
+	wwHouseInBiome(1, 2, imgHouseSignGel);
 	wwHouseInBiome(2, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(3, 2, imgHouseSignGoldsmith);
+	wwHouseInBiome(3, 2, imgHouseSignGel);
 	wwHouseInBiome(4, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(5, 2, imgHouseSignGoldsmith);
+	wwHouseInBiome(5, 2, imgHouseSignGel);
+	
+	wwHouseInBiome(2, 3, imgHouseSignMythril);
+	wwHouseInBiome(3, 3, imgHouseSignMythril);
+	wwHouseInBiome(4, 3, imgHouseSignMythril);
+	wwHouseInBiome(5, 3, imgHouseSignMythril);
 	
 	
 	
@@ -149,19 +156,7 @@ function wwRoll(){
 	wwOre(imgBlockAdamantite, 800, 5);
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	for(var a=0; a<W/BW; a++){
-		//wwChestInBiome(a, 2, imgBlockChest);
-		//wwChestInBiome(a, 2, imgBlockChest);
-	}
-	
-	
+
 	
 	
 	//replace dirt

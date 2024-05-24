@@ -16,6 +16,7 @@ function wwChestHouseInBiome(aaa, bbb, t){
 		var botBlockSpace = 0;
 		for(var a=aa; a<aa+w; a++){ for(var b=bb; b<bb+h; b++){
 			if(!inBounds(a, b)){ ok = false; continue; }
+			if(bgmap[a, b] == imgBGHouse){ ok = false; continue; }
 			if(bmap[a, b] == noone){ nonBlockSpace ++; }
 			if(bmap[a, b] != noone){ blockSpace ++; }
 			if(bmap[a, b] != noone && b == bb+h-1){ botBlockSpace ++; }

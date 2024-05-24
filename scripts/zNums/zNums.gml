@@ -30,15 +30,17 @@ function zNums(){
 	}
 	
 	enum Passive {
-		multijump, armor, moveFast, regen,
+		multijump, armor, moveFast, regen, digFar, mpShield, highJump, hpMax, armor2, 
 	}
 	
 	enum Pot {
-		healing, stoneskin, might,
+		healing, stoneskin, might, shine,
 	}
 	
 	enum Buff {
-		regen, stoneskin, might,
+		burn, poison, stun,
+		dark,
+		regen, stoneskin, might, shine,
 	}
 	
 	

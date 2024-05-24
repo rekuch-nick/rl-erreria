@@ -14,12 +14,19 @@ if(pressedStart && ww.state == State.play){
 }
 
 if(pressedMap){
+	xMap = clamp(xSpot - (room_width / 8), 0, (ww.W - 337) );
+	yMap = clamp(ySpot - (room_height / 8), 0, (ww.H - 192) );
+	//if(pc.xSpot > floor(ww.W / 2) ){ xMap = pc.xSpot - floor(ww.W / 2); }
+	//xMap = clamp(xSpot - floor(ww.W/2), 0, ww.W - floor(ww.W/2));
+	//yMap = clamp(ySpot - floor(ww.H/2), 0, ww.H - floor(ww.H/2));
 	ww.state = ww.state == State.map ? State.play : State.map;	
+	
 }
 
 
 if(ww.state == State.pause){ playerStepBag(); }
 if(ww.state == State.shop){ playerStepShop(); }
+if(ww.state == State.map){ playerStepMap(); }
 
 
 
@@ -37,10 +44,15 @@ if(inPlayMS == 0){
 }
 
 
-
-
 for(var i=0; i<100; i++){
-	if(buff[i] > 0){ buff[i] --; }
+	if(buff[i] > 0){ 
+		if(i == Buff.burn){ hp -= .2; }
+		if(i == Buff.poison){ hp -= .2; }
+		buff[i] --; 
+	}
+	
+	
+	
 }
 
 
@@ -127,15 +139,20 @@ if(actCD > 0){ actCD --; } else {
 		
 		if(use.action == Use.pick){
 			
-			var aa = floor(xx / 64) * 64 + 32; 
-			var bb = floor(yy / 64) * 64 + 32; 
-			aa += 64 * xDirHeld;
-			bb += 64 * yDirHeld;
-			var c = cordLogicToScreen(aa, bb);
-			aa = c.a; bb = c.b;
+			///
+			var aa = floor(xx / 64) * 64 + 32;
+			var bb = floor(yy / 64) * 64 + 32;
 			
-			tempMight = use.might;
-			var e = instance_create_depth(aa, bb, ww.layerE, use.obj);
+			for(var i=1; i<=digLen; i++){
+				
+				aa += (64 * xDirHeld);
+				bb += (64 * yDirHeld);
+				var c = cordLogicToScreen(aa, bb);
+				var aal = c.a; var bbl = c.b;
+			
+				tempMight = use.might;
+				var e = instance_create_depth(aal, bbl, ww.layerE, use.obj);
+			}
 			
 			actCD = use.useCD;
 			

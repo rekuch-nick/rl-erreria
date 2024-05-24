@@ -1,3 +1,4 @@
-if(hurtTime % 2 == 1){ return; }
-draw_self();
-
+if(hurtTime % 2 == 0){ 
+	draw_self();
+}
+creatureDrawBuff();

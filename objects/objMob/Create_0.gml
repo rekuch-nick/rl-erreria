@@ -35,12 +35,19 @@ hpMax = 10;
 armor = 0;
 
 bumpMight = 6;
+bumpBurns = 0;
+bumpPoisons = 0;
 
 dropChance = 0;
 drop = noone;
+
+for(var i=0; i<10; i++){
+	buff[i] = 0;
+}
 
 var c = cordScreenToLogic(x, y);
 xx = c.a;
 yy = c.b;
 
 setSpots(xx, yy);
+

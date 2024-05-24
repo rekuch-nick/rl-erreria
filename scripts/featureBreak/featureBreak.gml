@@ -16,7 +16,7 @@ function featureBreak(a, b){
 	} else if(t == imgJar ){
 		
 		
-		pupSpawn(c.a, c.b, getItem(choose("Healing Potion", "Potion of Might")));
+		pupSpawn(c.a, c.b, getItem(choose("Platform", "Healing Potion", "Potion of Might", "Shine Potion", "Stoneskin Potion")));
 	
 	} else if (t == imgBushPurp) {
 		

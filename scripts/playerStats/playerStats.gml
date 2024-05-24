@@ -6,13 +6,14 @@ function playerStats(){
 	
 	
 	jumpPow = -24;
-	
+	jumpPow -= playerPassivePower(Passive.highJump);
 	
 	armor = 0;
 	armor += playerPassivePower(Passive.armor);
+	armor += playerPassivePower(Passive.armor2);
 	
 	hpMax = 100;
-
+	hpMax += playerPassivePower(Passive.hpMax);
 	
 	hurtTimeMax = 20;
 	
@@ -25,6 +26,11 @@ function playerStats(){
 	
 	shine = 2;
 	
+	digLen = 1;
+	digLen += playerPassivePower(Passive.digFar);
+	
+	mpShield = 0;
+	mpShield += playerPassivePower(Passive.mpShield);
 	
 	hpRegen = 0;
 	hpRegen += playerPassivePower(Passive.regen);
