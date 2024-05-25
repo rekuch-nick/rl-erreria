@@ -45,7 +45,7 @@ shotKind = noone;
 shotCDMax = 150; shotCD = shotCDMax;
 clusterMax = 0; cluster = clusterMax; clusterCD = 10;
 
-
+hitByBlast = false;
 
 for(var i=0; i<10; i++){
 	buff[i] = 0;

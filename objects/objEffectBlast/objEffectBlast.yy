@@ -1,14 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"objPCShot",
+  "%Name":"objEffectBlast",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"objMob","path":"objects/objMob/objMob.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objPCShot",
+  "name":"objEffectBlast",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -36,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"imgItmDagger",
-    "path":"sprites/imgItmDagger/imgItmDagger.yy",
+    "name":"imgEffectBlast",
+    "path":"sprites/imgEffectBlast/imgEffectBlast.yy",
   },
   "spriteMaskId":null,
   "visible":true,

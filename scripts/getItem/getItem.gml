@@ -249,6 +249,48 @@ function getItem(n){
 	}
 	
 	
+	if(n == "Throwing Knife"){
+		s.img = imgItmDagger;
+		s.action = Use.swing;
+		s.might = 4;
+		s.obj = objPCShot;
+		s.useCD = 15;
+		s.desc = "Might: 4";
+		s.canStack = true;
+		s.consumeOnUse = true;
+		s.stack = 10;
+		s.makeWith1 = Mat.wood; s.makeCost1 = 2;
+		s.makeWith2 = Mat.stinger; s.makeCost2 = 2;
+	}
+	
+	if(n == "Bomb"){
+		s.img = imgItmBomb;
+		s.action = Use.swing;
+		s.might = 0;
+		s.obj = objPCBomb;
+		s.useCD = 20;
+		s.desc = "BOOM!";
+		s.canStack = true;
+		s.consumeOnUse = true;
+		s.stack = 4;
+		s.makeWith1 = Mat.gel; s.makeCost1 = 4;
+		s.makeWith2 = Mat.stinger; s.makeCost2 = 4;
+	}
+	
+	if(n == "Torch"){
+		s.img = imgItmTorch;
+		s.action = Use.swing;
+		s.might = 0;
+		s.obj = objPCTorch;
+		s.useCD = 20;
+		s.desc = "Hot!";
+		s.canStack = true;
+		s.consumeOnUse = true;
+		s.stack = 10;
+		s.makeWith1 = Mat.gel; s.makeCost1 = 2;
+		s.makeWith2 = Mat.wood; s.makeCost2 = 2;
+	}
+	
 	
 	
 	

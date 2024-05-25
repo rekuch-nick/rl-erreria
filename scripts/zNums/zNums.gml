@@ -47,5 +47,6 @@ function zNums(){
 	
 	enum Aim {
 		snipe, xSnipe, ySnipe, wild, close, 
+		pcFace, pcHold, auto, 
 	}
 }

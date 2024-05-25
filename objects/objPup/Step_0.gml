@@ -20,9 +20,7 @@ if(xSpeed != 0){
 }
 
 
-if(!pointInBlock(xx, yy + 1) && !pointInPlat(xx, yy + 1) &&
-	!pointInBlock(xx, yy + 17) && !pointInPlat(xx, yy + 17)
-						){
+if( !itemOnGround() ){
 	ySpeed = clamp(ySpeed + 1, -128, 128);
 } else {
 	if(ySpeed > 0){ ySpeed = 0; }
@@ -38,9 +36,7 @@ if(ySpeed != 0){
 			yy -= getDir(ySpeed);
 			break;
 		}
-		if(ySpeed > 0 && ( pointInBlock(xx, yy + 1) || pointInPlat(xx, yy + 1) ||
-							pointInBlock(xx, yy + 17) || pointInPlat(xx, yy + 17)
-									) ){
+		if(ySpeed > 0 && itemOnGround() ){
 			if(bounce > 0){
 				bounce --;
 				ySpeed = bouncePow;

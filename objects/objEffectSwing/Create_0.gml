@@ -10,6 +10,7 @@ setSpots(xx, yy);
 scroll = false;
 
 mobsHit = [];
+breakOnHit = false;
 
 burnChance = 0;
 burnPow = 0;

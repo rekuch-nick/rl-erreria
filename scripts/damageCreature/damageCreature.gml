@@ -17,6 +17,14 @@ function damageCreature(c, pow){
 		}
 	}
 	
+	if(pow > 0){
+		var e = instance_create_depth(c.x, c.y - 48, ww.layerE, objEffect);
+		e.txt = string(pow);
+		e.ySpeed = -2;
+		e.fade = .05;
+		if(c.object_index == objPlayer){e.txtCol = c_red; }
+	}
+	
 	c.hp -= pow;
 	c.hurtTime = 20;
 	

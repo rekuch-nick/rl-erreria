@@ -86,8 +86,7 @@ if(ww.state == State.map){
 			){ c = c_red; cc = c_black; }
 		
 		if(pc.xSpot == a && pc.ySpot == b){
-			c = c_white;
-			if(ww.inGameMS % 2 == 1){ c = c_aqua; }
+			c = ww.inGameMS % 2 == 1 ? c_white : c_aqua;
 		}
 		
 		var aP = a - xMap;
@@ -96,6 +95,9 @@ if(ww.state == State.map){
 		draw_rectangle_color((aP)*4, (bP)*4, (aP)*4 + 3, (bP)*4 + 3, c, c, c, c, 0);
 		if(cc != noone){ draw_rectangle_color((aP)*4+1, (bP)*4+1, (aP)*4 + 2, (bP)*4 + 2, cc, cc, cc, cc, 0); }
 	}}
+	
+	c = ww.inGameMS % 2 == 1 ? c_white : c_aqua;
+	draw_rectangle_color((xSpot - xMap)*4-4, (ySpot - yMap)*4-4, (xSpot - xMap)*4 + 3+4, (ySpot - yMap)*4 + 3+4, c, c, c, c, true);
 	
 	//if(debug){ draw_text(4, 4, string(xMap) + ", " + string(yMap)); }
 }

@@ -2,7 +2,7 @@ function wwRoll(){
 	
 	
 	//var s = "123";
-	val = 12;
+	val = 13;
 	//for(var i=0; i<string_length(s); i++){
 	//	var v = ord(string_char_at(s, i));
 	//	val += v;
@@ -122,33 +122,26 @@ function wwRoll(){
 	
 	//shops
 	shop[imgHouseSignWoodwork] = [ getItem("Platform"), getItem("Wooden Sword"), getItem("Wooden Armor"), noone ];
-	shop[imgHouseSignGoldsmith] = [ getItem("Gold Pickaxe"), getItem("Golden Sword"), getItem("Golden Armor"), noone ];
-	shop[imgHouseSignMythril] = [ getItem("Mythril Pickaxe"), getItem("Mythril Sword"), getItem("Mythril Armor"), noone ];
 	shop[imgHouseSignPick] = [ getItem("Gold Pickaxe"), getItem("Mythril Pickaxe"), getItem("Adamantite Pick"), noone ];
 	
-	shop[imgHouseSignGel] = [ getItem("Healing Potion"), getItem("Gel Sword"), getItem("Shine Potion"), noone ];
-	shop[imgHouseSignNails] = [ getItem("Hop n Tops"), getItem("Sonic Gear"), getItem("Shield Drape"), noone ];
-	shop[imgHouseSignHats] = [ getItem("Golden Helm"), getItem("Feather Cap"), getItem("Miner's Rag"), noone ];
+	shop[imgHouseSignGoldsmith] = [ getItem("Gold Pickaxe"), getItem("Golden Sword"), getItem("Golden Armor"), noone ];
+	shop[imgHouseSignGel] = [ getItem("Torch"), getItem("Bomb"), getItem("Gel Sword"), noone ];
 	shop[imgHouseSignPots] = [ getItem("Healing Potion"), getItem("Potion of Might"), getItem("Stoneskin Potion"), noone ];
 	
-	wwHouseInBiome(0, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(1, 2, imgHouseSignGel);
-	wwHouseInBiome(2, 2, imgHouseSignPots);
-	wwHouseInBiome(3, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(4, 2, imgHouseSignGel);
-	wwHouseInBiome(5, 2, imgHouseSignPots);
-	wwHouseInBiome(6, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(7, 2, imgHouseSignGel);
+	shop[imgHouseSignMythril] = [ getItem("Mythril Pickaxe"), getItem("Mythril Sword"), getItem("Mythril Armor"), noone ];
+	shop[imgHouseSignNails] = [ getItem("Hop n Tops"), getItem("Sonic Gear"), getItem("Shield Drape"), noone ];
+	shop[imgHouseSignHats] = [ getItem("Golden Helm"), getItem("Feather Cap"), getItem("Miner's Rag"), noone ];
 	
 	
-	wwHouseInBiome(0, 3, imgHouseSignNails);
-	wwHouseInBiome(1, 3, imgHouseSignMythril);
-	wwHouseInBiome(2, 3, imgHouseSignHats);
-	wwHouseInBiome(3, 3, imgHouseSignNails);
-	wwHouseInBiome(4, 3, imgHouseSignMythril);
-	wwHouseInBiome(5, 3, imgHouseSignHats);
-	wwHouseInBiome(6, 3, imgHouseSignNails);
-	wwHouseInBiome(7, 3, imgHouseSignMythril);
+	houses1 = [imgHouseSignGoldsmith, imgHouseSignGoldsmith, imgHouseSignGoldsmith, imgHouseSignGel, imgHouseSignGel, imgHouseSignGel, imgHouseSignPots, imgHouseSignPots];
+	array_shuffle(houses1);
+	for(var i=0; i<8; i++){ wwHouseInBiome(i, 2, houses1[i]); }
+	
+	houses2 = [imgHouseSignMythril, imgHouseSignMythril, imgHouseSignMythril, imgHouseSignNails, imgHouseSignNails, imgHouseSignNails, imgHouseSignHats, imgHouseSignHats];
+	array_shuffle(houses2);
+	for(var i=0; i<8; i++){ wwHouseInBiome(i, 3, houses2[i]); }
+	
+	
 	
 	
 	

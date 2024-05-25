@@ -1,22 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"objPCShot",
+  "%Name":"objPCBomb",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"objMob","path":"objects/objMob/objMob.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objPCShot",
+  "name":"objPCBomb",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"objEffect",
-    "path":"objects/objEffect/objEffect.yy",
+    "name":"objPCShot",
+    "path":"objects/objPCShot/objPCShot.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -36,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"imgItmDagger",
-    "path":"sprites/imgItmDagger/imgItmDagger.yy",
+    "name":"imgShotBomb",
+    "path":"sprites/imgShotBomb/imgShotBomb.yy",
   },
   "spriteMaskId":null,
   "visible":true,

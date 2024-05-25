@@ -168,9 +168,10 @@ if(actCD > 0){ actCD --; } else {
 		if(use.action == Use.placeP){
 			var aa = floor(xx / 64) * 64 + 32; 
 			var bb = floor(yy / 64) * 64 + 32; 
-			aa += 64 * getDir(image_xscale);
+			
 			if(yDirHeld < 0){ bb -= 64; } else {
 				bb += 64 * 1;
+				aa += 64 * getDir(image_xscale);
 			}
 			
 			var c = cordLogicToScreen(aa, bb);

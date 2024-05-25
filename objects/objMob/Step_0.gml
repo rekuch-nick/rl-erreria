@@ -120,7 +120,7 @@ if(canShoot && shotKind != noone){
 
 
 
-
+hitByBlast = false;
 
 
 if(x > room_width * 2 || x < -room_width ||
