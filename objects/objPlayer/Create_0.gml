@@ -65,10 +65,12 @@ bag[0].item = getItem("Sword");
 bag[1].item = getItem("Pickaxe");
 //bag[2].item = getItem("Platform"); bag[2].item.stack = 2;
 
-//bag[8].item = getItem("Hop n Tops");
+bag[8].item = getItem("Healing Potion");
 //bag[9].item = getItem("Armor");
 //bag[10].item = getItem("Sonic Gear");
 //bag[11].item = getItem("Body Ring");
+//bag[12].item = getItem("Mythril Sword");
+
 
 for(var i=0; i<100; i++){
 	mat[i] = 0;

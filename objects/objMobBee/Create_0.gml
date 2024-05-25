@@ -1,9 +1,8 @@
 event_inherited();
 
 
-//drop = getItem("Gel");
-//if(irandom_range(1, 10) == 1){ drop = getItem("Healing Potion"); }
-//dropChance = 40;
+drop = getItem("Stinger");
+dropChance = 80;
 
 grav = .5;
 

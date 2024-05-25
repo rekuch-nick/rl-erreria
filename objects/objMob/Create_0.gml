@@ -41,6 +41,12 @@ bumpPoisons = 0;
 dropChance = 0;
 drop = noone;
 
+shotKind = noone;
+shotCDMax = 150; shotCD = shotCDMax;
+clusterMax = 0; cluster = clusterMax; clusterCD = 10;
+
+
+
 for(var i=0; i<10; i++){
 	buff[i] = 0;
 }

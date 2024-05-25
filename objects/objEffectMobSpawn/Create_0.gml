@@ -19,3 +19,12 @@ if(ww.biome[xB, yB] == Biome.purp){
 }
 
 
+if(ww.biome[xB, yB] == Biome.specs){
+	mob = objMobCrab;
+}
+
+
+if(ww.biome[xB, yB] == Biome.deepCave){
+	mob = objMobCrasher;
+}
+

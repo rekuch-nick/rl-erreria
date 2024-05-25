@@ -1,12 +1,12 @@
 function wwRoll(){
 	
 	
-	var s = "123";
-	val = 0;
-	for(var i=0; i<string_length(s); i++){
-		var v = ord(string_char_at(s, i));
-		val += v;
-	}
+	//var s = "123";
+	val = 12;
+	//for(var i=0; i<string_length(s); i++){
+	//	var v = ord(string_char_at(s, i));
+	//	val += v;
+	//}
 	
 	
 	
@@ -125,18 +125,31 @@ function wwRoll(){
 	shop[imgHouseSignGoldsmith] = [ getItem("Gold Pickaxe"), getItem("Golden Sword"), getItem("Golden Armor"), noone ];
 	shop[imgHouseSignMythril] = [ getItem("Mythril Pickaxe"), getItem("Mythril Sword"), getItem("Mythril Armor"), noone ];
 	shop[imgHouseSignPick] = [ getItem("Gold Pickaxe"), getItem("Mythril Pickaxe"), getItem("Adamantite Pick"), noone ];
-	shop[imgHouseSignGel] = [ getItem("Wooden Sword"), getItem("Gel Sword"), getItem("Gel Sword"), noone ];
+	
+	shop[imgHouseSignGel] = [ getItem("Healing Potion"), getItem("Gel Sword"), getItem("Shine Potion"), noone ];
+	shop[imgHouseSignNails] = [ getItem("Hop n Tops"), getItem("Sonic Gear"), getItem("Shield Drape"), noone ];
+	shop[imgHouseSignHats] = [ getItem("Golden Helm"), getItem("Feather Cap"), getItem("Miner's Rag"), noone ];
+	shop[imgHouseSignPots] = [ getItem("Healing Potion"), getItem("Potion of Might"), getItem("Stoneskin Potion"), noone ];
+	
 	wwHouseInBiome(0, 2, imgHouseSignGoldsmith);
 	wwHouseInBiome(1, 2, imgHouseSignGel);
-	wwHouseInBiome(2, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(3, 2, imgHouseSignGel);
-	wwHouseInBiome(4, 2, imgHouseSignGoldsmith);
-	wwHouseInBiome(5, 2, imgHouseSignGel);
+	wwHouseInBiome(2, 2, imgHouseSignPots);
+	wwHouseInBiome(3, 2, imgHouseSignGoldsmith);
+	wwHouseInBiome(4, 2, imgHouseSignGel);
+	wwHouseInBiome(5, 2, imgHouseSignPots);
+	wwHouseInBiome(6, 2, imgHouseSignGoldsmith);
+	wwHouseInBiome(7, 2, imgHouseSignGel);
 	
-	wwHouseInBiome(2, 3, imgHouseSignMythril);
-	wwHouseInBiome(3, 3, imgHouseSignMythril);
+	
+	wwHouseInBiome(0, 3, imgHouseSignNails);
+	wwHouseInBiome(1, 3, imgHouseSignMythril);
+	wwHouseInBiome(2, 3, imgHouseSignHats);
+	wwHouseInBiome(3, 3, imgHouseSignNails);
 	wwHouseInBiome(4, 3, imgHouseSignMythril);
-	wwHouseInBiome(5, 3, imgHouseSignMythril);
+	wwHouseInBiome(5, 3, imgHouseSignHats);
+	wwHouseInBiome(6, 3, imgHouseSignNails);
+	wwHouseInBiome(7, 3, imgHouseSignMythril);
+	
 	
 	
 	

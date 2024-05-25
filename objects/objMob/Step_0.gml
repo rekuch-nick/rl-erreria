@@ -1,5 +1,5 @@
 if(ww.state != State.play){ return; }
-
+canShoot = true;
 
 
 for(var i=0; i<10; i++){
@@ -90,10 +90,38 @@ for(var i=0; i<abs(ySpeed); i++){
 if(dir < 0 && image_xscale > 0){ image_xscale *= -1; }
 if(dir > 0 && image_xscale < 0){ image_xscale *= -1; }
 
-if(hurtTime > 0){ hurtTime --; }
+if(hurtTime > 0){ 
+	canShoot = false;
+	hurtTime --; 
+}
 
 
 setSpots(xx, yy);
+
+
+
+
+
+if(canShoot && shotKind != noone){
+	shotCD --;
+	if(shotCD < 1){
+		shotCD = shotCDMax;
+		if(cluster > 0){
+			cluster --;
+			shotCD = clusterCD;
+		} else {
+			cluster = clusterMax;
+		}
+		instance_create_depth(x, y, ww.layerE, shotKind);
+	}
+}
+
+
+
+
+
+
+
 
 if(x > room_width * 2 || x < -room_width ||
 	y > room_height * 2 || y < -room_height ){

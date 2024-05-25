@@ -22,41 +22,16 @@ function getItem(n){
 		matCore: Mat.core,
 	}
 	
-	if(n == "Core"){
-		s.img = imgPupCore;
-		s.mat = Mat.core;
-		s.amnt = 1;
-	}
-	
-	if(n == "Gel"){
-		s.img = imgPupGel;
-		s.mat = Mat.gel;
-		s.amnt = 1;
-	}
-	
-	if(n == "Gold"){
-		s.img = imgPupGold;
-		s.mat = Mat.gold;
-		s.amnt = 1;
-	}
-	
-	if(n == "Mythril"){
-		s.img = imgPupMythril;
-		s.mat = Mat.mythril;
-		s.amnt = 1;
-	}
-	
-	if(n == "Adamantite"){
-		s.img = imgPupAdamantite;
-		s.mat = Mat.adamantite;
-		s.amnt = 1;
-	}
-	
-	if(n == "Wood"){
-		s.img = imgPupWood;
-		s.mat = Mat.wood;
-		s.amnt = 1;
-	}
+	if(n == "Core"){ s.img = imgPupCore; s.mat = Mat.core; s.amnt = 1; }
+	if(n == "Gel"){ s.img = imgPupGel; s.mat = Mat.gel; s.amnt = 1; }
+	if(n == "Gold"){ s.img = imgPupGold; s.mat = Mat.gold; s.amnt = 1; }
+	if(n == "Mythril"){ s.img = imgPupMythril; s.mat = Mat.mythril; s.amnt = 1; }
+	if(n == "Adamantite"){ s.img = imgPupAdamantite; s.mat = Mat.adamantite; s.amnt = 1; }
+	if(n == "Wood"){ s.img = imgPupWood; s.mat = Mat.wood; s.amnt = 1; }
+	if(n == "Tar"){ s.img = imgPupTarBall; s.mat = Mat.tar; s.amnt = 1; }
+	if(n == "Stinger"){ s.img = imgPupStringer; s.mat = Mat.stinger; s.amnt = 1; }
+	if(n == "Chip"){ s.img = imgPupChip; s.mat = Mat.chip; s.amnt = 1; }
+	if(n == "Gems"){ s.img = imgPupGems; s.mat = Mat.gems; s.amnt = 1; }
 	
 	if(n == "Pickaxe"){
 		s.img = imgItmPick;
@@ -64,7 +39,7 @@ function getItem(n){
 		s.might = 4;
 		s.obj = objEffectDig;
 		s.useCD = 12;
-		s.desc = "Strike the Earth!";
+		s.desc = "Strike the Earth!\nDig Power: 4";
 	}
 	
 	if(n == "Gold Pickaxe"){
@@ -159,6 +134,8 @@ function getItem(n){
 		s.passive = [Passive.multijump];
 		s.slotTag = "Boots";
 		s.desc = "Grants double jump. [Boots]";
+		s.makeWith1 = Mat.gems; s.makeCost1 = 10;
+		s.makeWith2 = Mat.stinger; s.makeCost2 = 20;
 	}
 	
 	if(n == "Sonic Gear"){
@@ -167,6 +144,8 @@ function getItem(n){
 		s.passive = [Passive.moveFast];
 		s.slotTag = "Boots";
 		s.desc = "Run super fast. [Boots]";
+		s.makeWith1 = Mat.tar; s.makeCost1 = 10;
+		s.makeWith2 = Mat.crystal; s.makeCost2 = 10;
 	}
 	
 	if(n == "Miner's Rag"){
@@ -175,6 +154,8 @@ function getItem(n){
 		s.passive = [Passive.digFar];
 		s.slotTag = "Helm";
 		s.desc = "Dig farther. [Helm]";
+		s.makeWith1 = Mat.chip; s.makeCost1 = 10;
+		s.makeWith2 = Mat.crystal; s.makeCost2 = 10;
 	}
 	
 	if(n == "Shield Drape"){
@@ -183,6 +164,8 @@ function getItem(n){
 		s.passive = [Passive.mpShield];
 		s.slotTag = "Cloak";
 		s.desc = "Consume MP to prevent 50% damage. [Cloak]";
+		s.makeWith1 = Mat.gems; s.makeCost1 = 10;
+		s.makeWith2 = Mat.chip; s.makeCost2 = 10;
 	}
 	
 	if(n == "Feather Cap"){
@@ -191,6 +174,8 @@ function getItem(n){
 		s.passive = [Passive.highJump];
 		s.slotTag = "Helm";
 		s.desc = "Jump higher. [Helm]";
+		s.makeWith1 = Mat.stinger; s.makeCost1 = 10;
+		s.makeWith2 = Mat.crystal; s.makeCost2 = 10;
 	}
 	
 	if(n == "Body Ring"){
@@ -198,6 +183,8 @@ function getItem(n){
 		s.might = 40;
 		s.passive = [Passive.hpMax];
 		s.desc = "+40 Max HP";
+		s.makeWith1 = Mat.chip; s.makeCost1 = 10;
+		s.makeWith2 = Mat.gems; s.makeCost2 = 10;
 	}
 	
 	if(n == "Armor Ring"){
@@ -205,6 +192,8 @@ function getItem(n){
 		s.might = 2;
 		s.passive = [Passive.armor2];
 		s.desc = "+2 Armor";
+		s.makeWith1 = Mat.chip; s.makeCost1 = 10;
+		s.makeWith2 = Mat.gold; s.makeCost2 = 15;
 	}
 	
 	if(n == "Golden Armor"){
@@ -270,6 +259,8 @@ function getItem(n){
 		s.consumeOnUse = true;
 		s.menuUse = Pot.healing;
 		s.desc = "Restore 100 HP over 20 seconds.";
+		s.makeWith1 = Mat.gel; s.makeCost1 = 4;
+		s.makeWith2 = Mat.mythril; s.makeCost2 = 4;
 	}
 	
 	if(n == "Potion of Might"){
@@ -278,6 +269,8 @@ function getItem(n){
 		s.consumeOnUse = true;
 		s.menuUse = Pot.might;
 		s.desc = "Deal 50% melee damage for 2 minutes.";
+		s.makeWith1 = Mat.crystal; s.makeCost1 = 4;
+		s.makeWith2 = Mat.chip; s.makeCost2 = 4;
 	}
 	
 	if(n == "Shine Potion"){
@@ -286,6 +279,8 @@ function getItem(n){
 		s.consumeOnUse = true;
 		s.menuUse = Pot.shine;
 		s.desc = "See through walls.";
+		s.makeWith1 = Mat.gems; s.makeCost1 = 4;
+		s.makeWith2 = Mat.gel; s.makeCost2 = 4;
 	}
 	
 	if(n == "Stoneskin Potion"){
@@ -294,6 +289,8 @@ function getItem(n){
 		s.consumeOnUse = true;
 		s.menuUse = Pot.stoneskin;
 		s.desc = "Take half damage from physical attacks.";
+		s.makeWith1 = Mat.chip; s.makeCost1 = 4;
+		s.makeWith2 = Mat.stinger; s.makeCost2 = 4;
 	}
 	
 	return s;

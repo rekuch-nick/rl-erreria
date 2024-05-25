@@ -14,8 +14,9 @@ function zNums(){
 	}
 	
 	enum Mat {
-		wood, gel, 
+		wood, gel, stinger,
 		gold, mythril, adamantite,
+		crystal, tar, chip, gems,
 		core,
 		
 	}
@@ -31,17 +32,20 @@ function zNums(){
 	
 	enum Passive {
 		multijump, armor, moveFast, regen, digFar, mpShield, highJump, hpMax, armor2, 
+		thorns,
 	}
 	
 	enum Pot {
-		healing, stoneskin, might, shine,
+		healing, stoneskin, might, shine, thorns,
 	}
 	
 	enum Buff {
 		burn, poison, stun,
 		dark,
-		regen, stoneskin, might, shine,
+		regen, stoneskin, might, shine, thorns,
 	}
 	
-	
+	enum Aim {
+		snipe, xSnipe, ySnipe, wild, close, 
+	}
 }

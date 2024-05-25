@@ -9,6 +9,11 @@ function getBlock(i){
 		con: noone, damMax: 10, minMight: 1, 
 	} }
 	
+	if(i == imgBlockWood){ return { 
+		img: i, dam: 0, fra: choose(1, 0), 
+		con: getItem("Wood"), damMax: 10, minMight: 1, 
+	} }
+	
 	if(i == imgBlockDirtRock){ return { 
 		img: i, dam: 0, fra: choose(1, 0), 
 		con: noone, damMax: 40, minMight: 1, 

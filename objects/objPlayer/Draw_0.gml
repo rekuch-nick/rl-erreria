@@ -27,11 +27,12 @@ if(ww.state == State.pause || ww.state == State.shop){
 	draw_sprite_ext(imgScreenBag, 0, 0, 0, 4, 4, 0, c_white, 1);
 	
 	var aa = 2 * 64 + 32; var bb = 2 * 64 + 32;
-	for(var i=0; i<6; i++){
+	for(var i=0; i<16; i++){
 		if(pc.mat[i] > 0){
 			draw_sprite_stretched(matImage(i), 0, aa, bb, 64, 64);
-			draw_text(aa + 96, bb + 16, string(pc.mat[i]));
+			draw_text(aa + 96, bb + 20, string(pc.mat[i]));
 			bb += 64;
+			if(bb >= 64 * 10){ bb = 2 * 64 + 32; aa += 192; }
 		}
 	}
 	

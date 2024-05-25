@@ -1,9 +1,8 @@
 event_inherited();
 
+drop = getItem("Tar"); dropChance = 80;
 
-drop = getItem("Gel");
-if(irandom_range(1, 10) == 1){ drop = getItem("Healing Potion"); }
-dropChance = 40;
+
 
 hp = 40;
 hpMax = 40;

@@ -17,6 +17,10 @@ function wwChestHouseInBiome(aaa, bbb, t){
 		for(var a=aa; a<aa+w; a++){ for(var b=bb; b<bb+h; b++){
 			if(!inBounds(a, b)){ ok = false; continue; }
 			if(bgmap[a, b] == imgBGHouse){ ok = false; continue; }
+			if(fmap[a, b] == imgHouseLeft){ ok = false; continue; }
+			if(fmap[a, b] == imgHouseRight){ ok = false; continue; }
+			if(fmap[a, b] == imgHouseRoofLeft){ ok = false; continue; }
+			if(fmap[a, b] == imgHouseRoofRight){ ok = false; continue; }
 			if(bmap[a, b] == noone){ nonBlockSpace ++; }
 			if(bmap[a, b] != noone){ blockSpace ++; }
 			if(bmap[a, b] != noone && b == bb+h-1){ botBlockSpace ++; }
