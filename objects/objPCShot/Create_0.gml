@@ -17,8 +17,8 @@ lob = 0;
 firstFrame = true;
 timeCD = 300;
 
-aim = Aim.pcFace;
-moveSpeed = 8;
+aim = Aim.pcHold;
+moveSpeed = 20;
 might = pc.tempMight;
 
 burns = 0;
@@ -28,8 +28,8 @@ mobsHit = [];
 breakOnHit = false;
 rot = getDir(pc.image_xscale) * 25;
 
-xGrav = 1;
-xGravMax = 20;
+xGrav = 0;
+xGravMax = 0;
 
 push = 10;
 

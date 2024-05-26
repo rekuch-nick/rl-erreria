@@ -11,3 +11,6 @@ rot = 0;
 
 burnChance = 100;
 burnPow = 120;
+
+aim = Aim.pcFace;
+moveSpeed = 8;

@@ -39,6 +39,7 @@ xICur = 0; yICur = 1;
 xSICur = -1; ySICur = -1;
 xHoldTime = 0; yHoldTime = 0;
 
+onRope = false;
 
 hud = instance_create_depth(0, 0, -1000, objBars);
 for(var i=0; i<64; i++){
@@ -67,7 +68,7 @@ bag[1].item = getItem("Pickaxe");
 //bag[2].item = getItem("Throwing Knife"); bag[2].item.stack = 20;
 //bag[2].item = getItem("Bomb"); bag[2].item.stack = 20;
 
-//bag[8].item = getItem("Healing Potion");
+//bag[8].item = getItem("Wand");
 //bag[9].item = getItem("Armor");
 //bag[10].item = getItem("Sonic Gear");
 //bag[11].item = getItem("Body Ring");
@@ -86,7 +87,8 @@ for(var i=0; i<100; i++){
 
 hurtTime = 0;
 
-
+walkFrame = 0;
+walkFrameCD = 1;
 
 
 playerStats();

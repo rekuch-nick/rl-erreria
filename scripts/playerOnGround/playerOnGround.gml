@@ -2,6 +2,8 @@ function playerOnGround(){
 	
 	if(pc.debug){ return false; }
 	
+	if(pc.onRope){ return true; }
+	
 	if(pc.yIn <= 0 && (pc.yy + 33) / 64 == floor((pc.yy + 33) / 64)){
 		var b = floor((pc.yy + 34) / 64);
 		var a1 = floor((pc.xx - 24) / 64);

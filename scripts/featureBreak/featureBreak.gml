@@ -21,6 +21,9 @@ function featureBreak(a, b){
 	
 	} else if (t == imgBushPurp) {
 		pupSpawn(c.a, c.b, getItem("Tar"));
+	} else if (t == imgBushCrystal) {
+		pupSpawn(c.a, c.b, getItem("Crystal"));
+		
 	} else { return; }
 	
 	

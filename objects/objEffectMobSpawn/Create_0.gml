@@ -28,3 +28,7 @@ if(ww.biome[xB, yB] == Biome.deepCave){
 	mob = objMobCrasher;
 }
 
+if(ww.biome[xB, yB] == Biome.crystal){
+	mob = objMobShadowMage;
+}
+

@@ -1,4 +1,5 @@
 event_inherited();
+harmless = false;
 
 rot = -25;
 timeCD = 7;

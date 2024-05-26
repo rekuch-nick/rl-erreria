@@ -124,7 +124,7 @@ function wwRoll(){
 	shop[imgHouseSignWoodwork] = [ getItem("Platform"), getItem("Wooden Sword"), getItem("Wooden Armor"), noone ];
 	shop[imgHouseSignPick] = [ getItem("Gold Pickaxe"), getItem("Mythril Pickaxe"), getItem("Adamantite Pick"), noone ];
 	
-	shop[imgHouseSignGoldsmith] = [ getItem("Gold Pickaxe"), getItem("Golden Sword"), getItem("Golden Armor"), noone ];
+	shop[imgHouseSignGoldsmith] = [ getItem("Golden Sword"), getItem("Golden Armor"), getItem("Wand"), noone ];
 	shop[imgHouseSignGel] = [ getItem("Torch"), getItem("Bomb"), getItem("Gel Sword"), noone ];
 	shop[imgHouseSignPots] = [ getItem("Healing Potion"), getItem("Potion of Might"), getItem("Stoneskin Potion"), noone ];
 	
@@ -150,6 +150,22 @@ function wwRoll(){
 		wwChestHouseInBiome(a, 2, imgBlockChest);
 		wwChestHouseInBiome(a, 2, imgBlockChest);
 	}
+	
+	
+	
+	
+	for(var a=0; a<W/BW; a++){ for(var b=0; b<H/BH; b++){
+		if(biome[a, b] == Biome.sky){
+			//wwSkyIslandInBiome(a, b);
+		}
+	}}
+	
+	
+	
+	//wwWorldTree(45, 45);
+	
+	
+	
 	
 	
 	
@@ -180,11 +196,13 @@ function wwRoll(){
 			
 			
 			if(biome[xB, yB] == Biome.purp && bmap[a, b-1] == noone){ bmap[a, b] = imgBlockGrassPurp; }
+			
 		}
 		
 		
 		if(biome[xB, yB] == Biome.specs && roll(60)){ bgmap[a, b] = imgBGCaveSpecs; }
 		if(biome[xB, yB] == Biome.slime && roll(40)){ bgmap[a, b] = imgBGCaveSlime; }
+		if(biome[xB, yB] == Biome.crystal && roll(40)){ bgmap[a, b] = imgBGCaveCrystal; }
 	}}
 	
 	
@@ -205,6 +223,14 @@ function wwRoll(){
 		if(bmap[a, b] == imgBlockGrassPurp && fmap[a, b - 1] == noone){
 			if(irandom_range(0, 4) == 1){ 
 				fmap[a, b - 1] = imgBushPurp;
+			}
+		}
+		
+		if(bmap[a, b] == imgBlockDirt && bmap[a, b - 1] == noone && 
+						fmap[a, b - 1] == noone && 
+						biome[floor(a / BW), floor(b / BH)] == Biome.crystal ){
+			if(irandom_range(0, 1) == 1){ 
+				fmap[a, b - 1] = imgBushCrystal;
 			}
 		}
 		

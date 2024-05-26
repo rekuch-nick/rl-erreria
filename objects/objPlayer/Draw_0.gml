@@ -4,8 +4,11 @@ if(debug){
 	draw_set_alpha(1);
 }
 
-var f = 0; image_alpha = 1;
-if(pc.hurtTime > 0){ f = 4; image_alpha = random_range(.5, 1); }
+var f = walkFrame; 
+if(ySpeed != 0){ f = 2; }
+if(yIn > 0){ f = 3; }
+image_alpha = 1;
+if(pc.hurtTime > 0){ image_alpha = random_range(.5, 1); }
 image_index = f;
 
 draw_self();

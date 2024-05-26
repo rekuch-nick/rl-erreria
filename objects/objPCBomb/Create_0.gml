@@ -8,3 +8,5 @@ grav = 1;
 
 xGrav = 0;
 rot = 0;
+
+breakOnHit = true;

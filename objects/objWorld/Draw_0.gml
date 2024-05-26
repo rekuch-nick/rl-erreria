@@ -36,7 +36,9 @@ for(var a=x1; a<=x2; a++){
 		}
 		
 		if(fmap[a, b] != noone){
-			draw_sprite_ext(fmap[a, b], 0, aa, bb, 4, 4, 0, c_white, 1);
+			var n = 0;
+			if(fmap[a, b] == imgFeatVine){ n = (a + b) % 2; }
+			draw_sprite_ext(fmap[a, b], n, aa, bb, 4, 4, 0, c_white, 1);
 		}
 		
 		

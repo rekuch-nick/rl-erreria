@@ -20,7 +20,7 @@ if(pressedMap){
 	//xMap = clamp(xSpot - floor(ww.W/2), 0, ww.W - floor(ww.W/2));
 	//yMap = clamp(ySpot - floor(ww.H/2), 0, ww.H - floor(ww.H/2));
 	ww.state = ww.state == State.map ? State.play : State.map;	
-	
+	room_speed = ww.state == State.map ? 10 : 30;
 }
 
 
@@ -159,10 +159,18 @@ if(actCD > 0){ actCD --; } else {
 		}
 		
 		if(use.action == Use.swing){
-			tempMight = use.might;
-			var e = instance_create_depth(x, y, ww.layerE, use.obj);
-			if(image_xscale < 0){ e.rot *= -1; }
-			actCD = use.useCD;
+			if(use.mpCost <= 0 || mp >= use.mpCost){
+				mp -= use.mpCost;
+			
+				tempMight = use.might;
+				var e = instance_create_depth(x, y, ww.layerE, use.obj);
+				if(image_xscale < 0){ e.rot *= -1; }
+				if(use.shoot != noone){
+					instance_create_depth(x, y, ww.layerE, use.shoot);
+				}
+				
+				actCD = use.useCD;
+			}
 		}
 		
 		if(use.action == Use.placeP){
@@ -200,6 +208,14 @@ if(actCD > 0){ actCD --; } else {
 }
 
 
+if(xIn != 0){ 
+	walkFrameCD --;
+	if(walkFrameCD < 1){ 
+		walkFrameCD = 6; 
+		walkFrame = walkFrame == 1 ? 0 : 1;
+	}
+	
+}
 
 if(pc.hurtTime > 0){ pc.hurtTime --; }
 

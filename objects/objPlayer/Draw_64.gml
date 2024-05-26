@@ -92,6 +92,8 @@ if(ww.state == State.map){
 		var aP = a - xMap;
 		var bP = b - yMap;
 		
+		if(aP < 0 || bP < 0 || aP > 336 || bP > 192){ continue; }
+		
 		draw_rectangle_color((aP)*4, (bP)*4, (aP)*4 + 3, (bP)*4 + 3, c, c, c, c, 0);
 		if(cc != noone){ draw_rectangle_color((aP)*4+1, (bP)*4+1, (aP)*4 + 2, (bP)*4 + 2, cc, cc, cc, cc, 0); }
 	}}

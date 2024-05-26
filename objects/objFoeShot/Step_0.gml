@@ -14,7 +14,7 @@ if(firstFrame){
 	xSpeed = cos(angle) * moveSpeed;
 	ySpeed = sin(angle) * moveSpeed;
 	
-	ySpeed = lob;
+	if(lob != 0){ ySpeed = lob; }
 }
 
 

@@ -20,6 +20,8 @@ function getItem(n){
 		makeCost2: 0,
 		makeReq: noone,
 		matCore: Mat.core,
+		shoot: noone,
+		mpCost: 0,
 	}
 	
 	if(n == "Core"){ s.img = imgPupCore; s.mat = Mat.core; s.amnt = 1; }
@@ -32,6 +34,7 @@ function getItem(n){
 	if(n == "Stinger"){ s.img = imgPupStringer; s.mat = Mat.stinger; s.amnt = 1; }
 	if(n == "Chip"){ s.img = imgPupChip; s.mat = Mat.chip; s.amnt = 1; }
 	if(n == "Gems"){ s.img = imgPupGems; s.mat = Mat.gems; s.amnt = 1; }
+	if(n == "Crystal"){ s.img = imgPupCrystal; s.mat = Mat.crystal; s.amnt = 1; }
 	
 	if(n == "Pickaxe"){
 		s.img = imgItmPick;
@@ -126,6 +129,23 @@ function getItem(n){
 		s.makeWith1 = Mat.gel; s.makeCost1 = 20;
 		s.makeReq = "Wooden Sword";
 	}
+	
+	
+	
+	
+	if(n == "Wand"){
+		s.img = imgItmWand;
+		s.action = Use.swing;
+		s.might = 4;
+		s.obj = objSwingHarmless;
+		s.useCD = 10;
+		s.shoot = objPCSpark;
+		s.makeWith1 = Mat.gold; s.makeCost1 = 20;
+		s.mpCost = 1;
+	}
+	
+	
+	
 	
 	
 	if(n == "Hop n Tops"){
