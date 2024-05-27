@@ -24,5 +24,5 @@ jumpInAir = 0;
 
 hp = 30;
 hpMax = 30;
-armor = 4;
+armor = 2;
 pushMod = .2;

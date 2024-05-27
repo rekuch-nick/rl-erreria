@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objMobSlime_1",
+  "%Name":"objMobShadowMage",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objMobSlime_1",
+  "name":"objMobShadowMage",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

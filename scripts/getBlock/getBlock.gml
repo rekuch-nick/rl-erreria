@@ -54,7 +54,7 @@ function getBlock(i){
 	
 	
 	
-	if(i == imgBlockDirtUnbreakable || i == imgBlockSky ){ return { 
+	if(i == imgBlockDirtUnbreakable || i == imgBlockSky || i == imgBlockCastle ){ return { 
 		img: i, dam: 0, fra: 0, 
 		con: noone, damMax: -1, minMight: 1000,
 	} }

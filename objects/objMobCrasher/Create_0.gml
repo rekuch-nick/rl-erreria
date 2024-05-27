@@ -4,8 +4,8 @@ event_inherited();
 drop = getItem("Chip"); dropChance = 80;
 
 
-hp = 50; hpMax = 50;
-armor = 4;
+hp = 40; hpMax = 40;
+armor = 2;
 
 
 moveSpeed = 3;

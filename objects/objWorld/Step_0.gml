@@ -23,12 +23,19 @@ if(state == State.play){
 			tries ++;
 			var a = pc.xSpot + irandom_range(-10, 10);
 			var b = pc.ySpot + irandom_range(-8, 8);
+			
+			
+			
 			if(inBounds(a, b)){
+				
+				if(ww.bgmap[a, b] == imgBGCastle || ww.bgmap[a, b] == imgBGCastleTop ){ continue; }
+				
 				if(ww.bmap[a, b] == noone){
 					var c = cordLogicToScreen(a * 64 + 32, b * 64 + 32);
 					var e = instance_create_depth(c.a, c.b, ww.layerM, objEffectMobSpawn);
 					break;
 				}
+				
 			}
 		}
 		
