@@ -7,6 +7,7 @@ if(debug){
 var f = walkFrame; 
 if(ySpeed != 0){ f = 2; }
 if(yIn > 0){ f = 3; }
+if(yIn < 0){ f = 4; }
 image_alpha = 1;
 if(pc.hurtTime > 0){ image_alpha = random_range(.5, 1); }
 image_index = f;

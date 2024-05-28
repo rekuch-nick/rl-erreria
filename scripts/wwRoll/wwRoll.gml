@@ -12,6 +12,8 @@ function wwRoll(){
 	
 	random_set_seed(val);
 	
+	//randomize();
+	
 	wwSetup();
 	for(var a=0; a<W; a++){ for(var b=0; b<H; b++){
 		bgmap[a, b] = imgBGCave;
@@ -25,9 +27,13 @@ function wwRoll(){
 	lavaLevel = 349;
 	xBuffer = 11;
 	
+	
+	
 	var gl = 97;
 	for(var a=0; a<W; a++){
 		gl = clamp(gl + choose(0, 0, 0, 1, -1), 94, 99);
+		if(a == floor(W/2) - 10){  glHome = gl; }
+		if(a > floor(W/2) - 10 && a < floor(W/2) + 10){ gl = glHome; }
 		for(var b=0; b<gl; b++){ 
 			bmap[a, b] = noone; 
 			//vmap[a, b] = true;
@@ -109,35 +115,9 @@ function wwRoll(){
 	
 	
 	
-	//home
-	var w = 20; var h = 10;
-	var aa = floor(W/2) - floor(w/2);
-	var bb = 80;
-	for(var a=aa; a<aa+w; a++){ for(var b=bb; b<bb+h; b++){
-		bgmap[a, b] = imgBGCastle;
-		if(b == bb){ bgmap[a, b] = imgBGCastleTop; }
-		
-		bmap[a, b] = noone;
-		if(b == bb + h - 1){ bmap[a, b] = imgBlockCastle; }
-		if( (a == aa || a == aa + w - 1) && b > bb && b < bb + h - 3){
-			bmap[a, b] = imgBlockCastle;
-		}
-	}}
-	for(var a=aa; a<aa+w; a++){
-		if(a == aa + 8){ a += 4; }
-		pmap[a, bb + 3] = imgPlatHome;
-		pmap[a, bb + 6] = imgPlatHome;
-	}
-	for(var a=aa; a<aa+w; a++){ for(var b=bb+h; b<100; b++){
-		if(bmap[a, b] == noone){ bmap[a, b] = imgBlockDirt; }
-	}}
-	houseAt(aa + 1, bb + 4, imgHouseSignWoodwork);
-	houseAt(aa + 4, bb + 4, imgHouseSignGel);
-	//houseAt(aa + 7, bb + 4, imgHouseSignWoodwork);
+	wwHomeCastle();
 	
-	//houseAt(aa + 10, bb + 4, imgHouseSignWoodwork);
-	houseAt(aa + 13, bb + 4, imgHouseSignPick);
-	houseAt(aa + 16, bb + 4, imgHouseSignGoldsmith);
+	
 	
 	/*var aaa = floor((W/2) / 50); var bbb = 1;
 	for(var aa=15; aa<45; aa++){

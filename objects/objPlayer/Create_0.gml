@@ -1,6 +1,6 @@
 image_xscale = 4; image_yscale = 4;
 xx = 672; yy = 384;
-xx = 200 * 64; yy = 82 * 64;
+xx = 200 * 64; yy = 80 * 64;
 xx = floor(ww.W / 2) * 64;
 playerNFrom();
 playerInput();

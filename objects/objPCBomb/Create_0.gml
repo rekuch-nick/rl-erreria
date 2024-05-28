@@ -1,5 +1,7 @@
 event_inherited();
 
+moveSpeed = 8;
+
 might = 0;
 push = 0;
 
