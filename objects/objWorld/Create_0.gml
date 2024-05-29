@@ -14,7 +14,8 @@ inGameSec = 0;
 inGameMin = 0;
 inGameHour = 0;
 
-
+gotBookGel = false;
+gotBookGold = false;
 
 wwSetup();
 state = State.gen;

@@ -2,7 +2,7 @@ event_inherited();
 
 
 drop = getItem("Gel"); dropChance = 80;
-if(irandom_range(1, 20) == 1){ drop = getItem("Healing Potion"); dropChance = 100; }
+if(irandom_range(1, 20) == 1 && !ww.gotBookGel){ drop = getItem(imgBookGel); dropChance = 100; }
 
 
 moveSpeed = 3;

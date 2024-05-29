@@ -57,6 +57,7 @@ if(got){
 		pc.bag[itemInSlot(item.nam)].item.stack += item.stack;
 	} else if(!item.canStack && itemInSlot(item.nam) != -1){
 		pc.mat[item.matCore] += 1;
+	} else if(addShop(sprite_index)) {
 	} else {
 		var n = itemFreeSlot();
 		if(n != -1){

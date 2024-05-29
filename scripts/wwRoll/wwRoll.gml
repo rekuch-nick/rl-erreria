@@ -145,6 +145,7 @@ function wwRoll(){
 	shop[imgHouseSignHats] = [ getItem("Golden Helm"), getItem("Feather Cap"), getItem("Miner's Rag"), noone ];
 	
 	
+	/*
 	houses1 = [imgHouseSignGoldsmith, imgHouseSignGoldsmith, imgHouseSignGoldsmith, imgHouseSignGel, imgHouseSignGel, imgHouseSignGel, imgHouseSignPots, imgHouseSignPots];
 	array_shuffle(houses1);
 	for(var i=0; i<8; i++){ wwHouseInBiome(i, 2, houses1[i]); }
@@ -152,7 +153,7 @@ function wwRoll(){
 	houses2 = [imgHouseSignMythril, imgHouseSignMythril, imgHouseSignMythril, imgHouseSignNails, imgHouseSignNails, imgHouseSignNails, imgHouseSignHats, imgHouseSignHats];
 	array_shuffle(houses2);
 	for(var i=0; i<8; i++){ wwHouseInBiome(i, 3, houses2[i]); }
-	
+	*/
 	
 	
 	

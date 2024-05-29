@@ -24,6 +24,9 @@ function getItem(n){
 		mpCost: 0,
 	}
 	
+	s.img = n;
+	
+	
 	if(n == "Core"){ s.img = imgPupCore; s.mat = Mat.core; s.amnt = 1; }
 	if(n == "Gel"){ s.img = imgPupGel; s.mat = Mat.gel; s.amnt = 1; }
 	if(n == "Gold"){ s.img = imgPupGold; s.mat = Mat.gold; s.amnt = 1; }

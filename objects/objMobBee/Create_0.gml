@@ -3,6 +3,7 @@ event_inherited();
 
 drop = getItem("Stinger");
 dropChance = 80;
+if(irandom_range(1, 20) == 1 && !ww.gotBookGel){ drop = getItem(imgBookGel); dropChance = 100; }
 
 grav = .5;
 
