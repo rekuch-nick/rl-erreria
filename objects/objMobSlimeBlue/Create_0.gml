@@ -2,23 +2,22 @@ event_inherited();
 
 
 drop = getItem("Gel"); dropChance = 80;
-if(irandom_range(1, 15) == 1 && !ww.gotBookGel){ drop = getItem(imgBookGel); dropChance = 100; }
 
 
-moveSpeed = 3;
-jumpPow = -12;
+moveSpeed = 5;
+jumpPow = -17;
 
 
 thinkCD = 0; 
 
-thinkCDMax = 30 * 5;
+thinkCDMax = 30 * 3;
 
 huntOnThink = 50;
-jumpOnThink = 0;
+jumpOnThink = 60;
 turnOnThink = 100;
 
 turnOnBump = 0;
-jumpOnBumb = 50;
+jumpOnBumb = 0;
 
 jumpAnytime = 1;
 jumpInAir = 0;

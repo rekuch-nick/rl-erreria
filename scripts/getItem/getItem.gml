@@ -22,6 +22,7 @@ function getItem(n){
 		matCore: Mat.core,
 		shoot: noone,
 		mpCost: 0,
+		countsAs: [],
 	}
 	
 	s.img = n;
@@ -131,6 +132,7 @@ function getItem(n){
 		s.desc = "Burns. Might: 4";
 		s.makeWith1 = Mat.gel; s.makeCost1 = 20;
 		s.makeReq = "Wooden Sword";
+		s.countsAs = ["Wooden Sword"];
 	}
 	
 	

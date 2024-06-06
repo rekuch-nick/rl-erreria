@@ -19,3 +19,6 @@ gotBookGold = false;
 
 wwSetup();
 state = State.gen;
+
+
+

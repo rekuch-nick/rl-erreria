@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objMobShadowMage",
+  "%Name":"objMobSlimeBlue",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objMobShadowMage",
+  "name":"objMobSlimeBlue",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"imgMobShadowMage",
-    "path":"sprites/imgMobShadowMage/imgMobShadowMage.yy",
+    "name":"imgMobSlimeBlue",
+    "path":"sprites/imgMobSlimeBlue/imgMobSlimeBlue.yy",
   },
   "spriteMaskId":null,
   "visible":true,
